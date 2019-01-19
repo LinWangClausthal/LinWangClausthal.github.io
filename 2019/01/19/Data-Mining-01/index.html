@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="python,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="交换值 In [94]:a = 15b = 20a,b = b,aprint (“a is {}, b is {}”.format(a,b))a is 20, b is 15 命名规范 标识符的第一个字符必须是英文大小写字母或下划线 标识符的其他字符可以由英文大小写字母或下划线或阿拉伯数字组成 标识符大小写敏感 代码规范 建议  尽量不要使用单字符 变量名字清晰表达变量所代表的意思 合理使用下划线">
-<meta name="keywords" content="python">
+<meta name="description" content="简单了解下数据挖掘将数据data变成知识knowledge的过程 data-target data-preprocessed data-Transformed data-patterns-knowledge 什么是KDD? Knowledge Discover in Database定义：KDD is the nontrivial process of identifying valid, nov">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python入门3">
-<meta property="og:url" content="http://yoursite.com/2018/12/25/Python入门3/index.html">
+<meta property="og:title" content="Data-Mining-01">
+<meta property="og:url" content="http://yoursite.com/2019/01/19/Data-Mining-01/index.html">
 <meta property="og:site_name" content="Lin&#39;s Blog">
-<meta property="og:description" content="交换值 In [94]:a = 15b = 20a,b = b,aprint (“a is {}, b is {}”.format(a,b))a is 20, b is 15 命名规范 标识符的第一个字符必须是英文大小写字母或下划线 标识符的其他字符可以由英文大小写字母或下划线或阿拉伯数字组成 标识符大小写敏感 代码规范 建议  尽量不要使用单字符 变量名字清晰表达变量所代表的意思 合理使用下划线">
+<meta property="og:description" content="简单了解下数据挖掘将数据data变成知识knowledge的过程 data-target data-preprocessed data-Transformed data-patterns-knowledge 什么是KDD? Knowledge Discover in Database定义：KDD is the nontrivial process of identifying valid, nov">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-19T15:02:05.000Z">
+<meta property="og:updated_time" content="2019-01-19T15:15:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python入门3">
-<meta name="twitter:description" content="交换值 In [94]:a = 15b = 20a,b = b,aprint (“a is {}, b is {}”.format(a,b))a is 20, b is 15 命名规范 标识符的第一个字符必须是英文大小写字母或下划线 标识符的其他字符可以由英文大小写字母或下划线或阿拉伯数字组成 标识符大小写敏感 代码规范 建议  尽量不要使用单字符 变量名字清晰表达变量所代表的意思 合理使用下划线">
+<meta name="twitter:title" content="Data-Mining-01">
+<meta name="twitter:description" content="简单了解下数据挖掘将数据data变成知识knowledge的过程 data-target data-preprocessed data-Transformed data-patterns-knowledge 什么是KDD? Knowledge Discover in Database定义：KDD is the nontrivial process of identifying valid, nov">
 
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/25/Python入门3/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/19/Data-Mining-01/">
 
 
 
 
 
-  <title>Python入门3 | Lin's Blog</title>
+  <title>Data-Mining-01 | Lin's Blog</title>
   
 
 
@@ -273,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/25/Python入门3/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/19/Data-Mining-01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lina">
@@ -290,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python入门3</h1>
+          <h1 class="post-title" itemprop="name headline">Data-Mining-01</h1>
         
 
         <div class="post-meta">
@@ -302,8 +301,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-25T16:16:01+01:00">
-                2018-12-25
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-19T16:14:48+01:00">
+                2019-01-19
               </time>
             
 
@@ -312,28 +311,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -362,45 +339,15 @@
       
 
       
-        <p>交换值</p>
-<p>In [94]:<br>a = 15<br>b = 20<br>a,b = b,a<br>print (“a is {}, b is {}”.format(a,b))<br>a is 20, b is 15</p>
-<p>命名规范</p>
-<p>标识符的第一个字符必须是英文大小写字母或下划线</p>
-<p>标识符的其他字符可以由英文大小写字母或下划线或阿拉伯数字组成</p>
-<p>标识符大小写敏感</p>
-<p>代码规范 建议</p>
-<ul>
-<li>尽量不要使用单字符</li>
-<li>变量名字清晰表达变量所代表的意思</li>
-<li>合理使用下划线<br>notebook里面用 -+空格 来表示前面的圆点</li>
-</ul>
-<p>变量类型</p>
-<ol>
-<li>字符串 str</li>
-<li>数字 int float complex…</li>
-<li>列表 list</li>
-<li>元组 tuple</li>
-<li>字典 dict<br>数值类型</li>
-</ol>
-<p>In [101]:<br>number = 10<br>In [102]:<br>number = number + 10<br>In [103]:<br>print number<br>20</p>
-<p>下面是另一种写法</p>
-<p>In [104]:<br>number += 10<br>In [105]:<br>print number<br>30</p>
-<p>其他运算符号 - * / 同样适用</p>
-<p>选中框 按 L 显示行数 小写的现实本框中行数 大写（按shift） 显示本页每框中行数</p>
-<p>math模块介绍</p>
-<p>乘方，开方</p>
-<ul>
-<li>第一个参数是数值 第二个参数是乘几次方<br>In [106]:<br>import math<br>In [107]:<br>math.pow(3,10)<br>Out[107]:<br>59049.0<br>建议采用下面的方法进行计算 因为更快</li>
-</ul>
-<p>In [108]:<br>3 ** 10<br>Out[108]:<br>59049<br>math.floor( )向下取整</p>
-<p>math.ceil( )向上取整</p>
-<p>In [111]:</p>
-<p>#参数是度数，180表示pi的值 度的转换<br>math.radians(180)<br>Out[111]:<br>3.141592653589793<br>In [110]:<br>math.pi<br>Out[110]:<br>3.141592653589793<br>In [112]:</p>
-<p>#sin cos tan函数<br>math.sin(math.pi/2)<br>Out[112]:<br>1.0<br>In [113]:</p>
-<p>#min 取最小值 max 取最大值<br>min(223,421,23,11)<br>Out[113]:<br>11<br>In [115]:</p>
-<p>#求和<br>sum([223,421,23,11])<br>Out[115]:<br>678<br>sum这里需要[] 是因为是列表</p>
-<p>In [118]:</p>
-<p>#取商和余数<br>divmod(100,3)<br>Out[118]:<br>(33, 1)</p>
+        <p>简单了解下数据挖掘<br>将数据data变成知识knowledge的过程</p>
+<p>data-target data-preprocessed data-Transformed data-patterns-knowledge</p>
+<p>什么是KDD? Knowledge Discover in Database<br>定义：KDD is the nontrivial process of identifying valid, novel, potentially useful, and ultimately understandable patterns in data.<br>valid: the discovered patterns should also hold for new, previously unseen problem instances.<br>novel: at least to the system and preferably to the user<br>potentially useful: they should lead to some benefit to the user or task<br>ultimately understandable用户必须理解: the end user should be able to interpret the patterns either immediately or aftersome post-processing</p>
+<p>datasets 由instances组成，由特征attribute描述</p>
+<p>learning Task 分类<br>有监督supervise学习 有反馈<br>无监督unsupervised学习 无反馈</p>
+<p>direct feedback-有label</p>
+<p>1-unsupervised learning 无label<br>clustering<br>applications:Market Segmentation, Document Clustering<br>Typical subtask: Clustering, Association rules(e.g. Market basket analysis), outlier detection</p>
+<p>2-supervise learning 有label 可以集成<br>Typical subtask: Classification, Regression, Outlier<br>Classification<br>Application: Fraud Detection, Chum prediction in telo<br>e.g. Goggle news 左侧都是有label的， 预测Farming</p>
+<p>Un/Supervise learning 都有异常检测</p>
 
       
     </div>
@@ -416,12 +363,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/python/" rel="tag"># python</a>
-          
-        </div>
-      
 
       
       
@@ -431,14 +372,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/01/19/cooperation/" rel="next" title="cooperation">
+                <i class="fa fa-chevron-left"></i> cooperation
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/12/Data-Mining-01/" rel="prev" title="Data Mining 01">
-                Data Mining 01 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/01/19/lego-developer/" rel="prev" title="lego-developer">
+                lego-developer <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -509,7 +454,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
