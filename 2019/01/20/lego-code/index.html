@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Environment:JavaSE-1.6EclipseLeJOS EV3 Code:Count.javapackage mindstorm; public class Count { private int countYellow; private int countRed; private int countGreen; private int countBlack; private int">
+<meta property="og:type" content="article">
+<meta property="og:title" content="lego-code">
+<meta property="og:url" content="http://yoursite.com/2019/01/20/lego-code/index.html">
+<meta property="og:site_name" content="Lin&#39;s Blog">
+<meta property="og:description" content="Environment:JavaSE-1.6EclipseLeJOS EV3 Code:Count.javapackage mindstorm; public class Count { private int countYellow; private int countRed; private int countGreen; private int countBlack; private int">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-01-20T13:00:31.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="lego-code">
+<meta name="twitter:description" content="Environment:JavaSE-1.6EclipseLeJOS EV3 Code:Count.javapackage mindstorm; public class Count { private int countYellow; private int countRed; private int countGreen; private int countBlack; private int">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/01/20/lego-code/">
+
+
+
+
+
+  <title>lego-code | Lin's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lin's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-recommend">
+          <a href="/recommend/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br>
+            
+            recommend
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/20/lego-code/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lina">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lin's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">lego-code</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-20T13:51:00+01:00">
+                2019-01-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Environment"><a href="#Environment" class="headerlink" title="Environment:"></a>Environment:</h2><p>JavaSE-1.6<br>Eclipse<br>LeJOS EV3</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h2><h3 id="Count-java"><a href="#Count-java" class="headerlink" title="Count.java"></a>Count.java</h3><p>package mindstorm;</p>
+<p>public class Count {</p>
+<pre><code>private int countYellow;
+private int countRed;
+private int countGreen;
+private int countBlack;
+private int countDefault;
+public Count(int countYellow, int countRed, int countGreen, int countBlack, int countDefault) {
+    super();
+    this.countYellow = countYellow;
+    this.countRed = countRed;
+    this.countGreen = countGreen;
+    this.countBlack = countBlack;
+    this.countDefault = countDefault;
+}
+public int getCountDefault() {
+    return countDefault;
+}
+public void setCountDefault(int countDefault) {
+    this.countDefault = countDefault;
+}
+public Count() {
+    super();
+}
+public int getCountYellow() {
+    return countYellow;
+}
+public void setCountYellow(int countYellow) {
+    this.countYellow = countYellow;
+}
+public int getCountRed() {
+    return countRed;
+}
+public void setCountRed(int countRed) {
+    this.countRed = countRed;
+}
+public int getCountGreen() {
+    return countGreen;
+}
+public void setCountGreen(int countGreen) {
+    this.countGreen = countGreen;
+}
+public int getCountBlack() {
+    return countBlack;
+}
+public void setCountBlack(int countBlack) {
+    this.countBlack = countBlack;
+}
+</code></pre><p>}</p>
+<h3 id="Sorting-java"><a href="#Sorting-java" class="headerlink" title="Sorting.java"></a>Sorting.java</h3><p>package mindstorm;</p>
+<p>import lejos.hardware.Button;<br>import lejos.hardware.Key;<br>import lejos.hardware.KeyListener;<br>import lejos.hardware.Sound;<br>import lejos.hardware.lcd.LCD;<br>import lejos.hardware.motor.Motor;<br>import lejos.hardware.port.SensorPort;<br>import lejos.hardware.sensor.EV3ColorSensor;<br>import lejos.hardware.sensor.SensorConstants;<br>import lejos.robotics.Color;<br>import lejos.utility.Delay;<br>/**</p>
+<ul>
+<li>this project is for lego mindstorm EV3 color sortor</li>
+<li>motor A and B is for running straight forward and backward</li>
+<li>motor C is to rotate an angle the hand on the robot </li>
+<li>sensor port 1 include a color sensor to identify the color</li>
+<li></li>
+<li><p>@author wanglinroot<br><em>
+</em>/<br>public class Sorting extends Object implements SensorConstants{</p>
+<p> static Count count = new Count(0,0,0,0,0);//count the colors</p>
+</li>
+</ul>
+<pre><code>public static void main(String[] args) throws Exception{
+
+    /**
+     * listener, when press on escape, stop
+     */
+    Button.ESCAPE.addKeyListener(new KeyListener(){
+    public void keyPressed(Key b){System.exit(1);}
+    public void keyReleased(Key b){}    
+    });
+
+    /**
+     * initialization:start project and the color sensor
+     */
+
+
+    EV3ColorSensor colorSensor = new EV3ColorSensor(SensorPort.S1);
+
+    /**
+     * hand from bottom, first hangs up, and the robot runs left to the slider
+     */
+
+    start();
+
+    /**
+     * start the LCD screen
+     */
+    LCD.clear();
+    LCD.drawString(&quot;Counting now!!!&quot;, 0, 0);
+
+    /**
+     * when button－ESCAPE on the monitor is pressed , stop
+     */
+    while(!Button.ESCAPE.isDown()){
+
+        rotate0();//catch ball 
+
+
+    /**
+     * scan the color, different color runs different handling method    
+     */
+    switch (colorSensor.getColorID()) {
+        case Color.BLACK:
+
+            handleBlack();
+            break;
+        case Color.RED:
+
+            handleRed();
+            break;
+        case Color.GREEN
+</code></pre><p>:</p>
+<pre><code>            handleGreen();
+            break;
+        case Color.YELLOW:
+
+            handleYellow();
+            break;
+
+        default:
+            count.setCountDefault(count.getCountDefault() + 1);//count the default situation once add 1
+            LCD.drawString(&quot;Default = &quot; + count.getCountDefault(), 2, 6);//display at possition(2,6)
+            handleNone();
+            break;
+        }
+    }
+
+    colorSensor.close();
+
+    }
+
+
+
+private static void start() {
+    Motor.C.rotate(-75);
+    Delay.msDelay(1000);
+    Motor.A.setSpeed(150);
+    Motor.B.setSpeed(150);
+    Motor.A.backward();
+    Motor.B.backward();
+    Delay.msDelay(3600);
+    Motor.A.stop();
+    Motor.B.stop();
+    Delay.msDelay(1500);
+
+}
+
+
+
+/**
+ * angle = 70° and 0.5s pause    
+ */
+private static void rotate0() {
+
+    speed0();
+
+    Motor.C.rotate(70);
+
+    Delay.msDelay(500);
+
+    Motor.C.rotate(-70);
+
+    Delay.msDelay(1500);//1.5s pause
+
+}
+
+/**
+ * angle = 63° and 1s pause    
+ */
+private static void rotate1() {
+    Motor.C.rotate(63);
+
+    Delay.msDelay(1000);
+
+    Motor.C.rotate(-63);
+
+}
+
+/*
+ * backward for 2.3s then stop
+ */
+private static void backward1() {
+    Motor.A.backward();
+    Motor.B.backward();
+    Delay.msDelay(2300);
+    Motor.A.stop();
+    Motor.B.stop();
+
+}
+
+
+/*
+ * forward for 2.3s then stop
+ */
+private static void forward1() {
+    Motor.A.forward();
+    Motor.B.forward();
+    Delay.msDelay(2300);
+    Motor.A.stop();
+    Motor.B.stop();
+
+}
+
+/*
+ * set speed
+ */
+private static void speed() {
+
+    Motor.A.setSpeed(150);
+    Motor.B.setSpeed(150);
+    Motor.C.setSpeed(320);//320°/s
+
+}
+
+private static void speed0(){
+
+    Motor.C.setSpeed(180);//for catching I make it a little bit slow, rotate 180°/s
+}
+
+
+/**
+ * when the color sensor scanning a yellow ball
+ * sound a beep
+ * then display the number on the LCD screen at the position(2,5)
+ * after that use the speed 150°/s go forward for 1 second and rotate the hand
+ * stop for 2.3 second  then backward for 2.3 second 
+ */
+private static void handleYellow() {
+
+    count.setCountYellow(count.getCountYellow() + 1); //count the yellow once add 1    
+    Sound.beep();
+    LCD.drawString(&quot;yellow = &quot; + count.getCountYellow(), 2, 5);
+    speed();
+    forward1();
+    rotate1();
+    backward1();
+    backwardadd();
+
+
+}
+
+private static void backwardadd() {
+    Motor.B.backward();
+    Motor.A.backward();
+    Delay.msDelay(75);
+    Motor.A.stop();
+    Motor.B.stop();
+
+}
+
+
+
+/**
+ * when the color sensor scanning a Black ball
+ * sound a beep
+ * then display the number on the LCD screen at the position(2,2)
+ * after that use the speed 150°/s go forward for 2.3 second twice and rotate the hand
+ * stop for 1 second  then backward for 2.3 second twice
+ */
+private static void handleGreen() {
+    Sound.buzz();
+    count.setCountGreen(count.getCountGreen() + 1);//count the Black once add 1
+    LCD.drawString(&quot;Green = &quot; + count.getCountGreen(), 2, 2);
+    speed();
+    forward1();
+    forward1();
+    rotate1();
+    backward1();
+    backward1();
+    backwardadd();//additional backward
+
+}
+
+/**
+ * when the color sensor scanning a Red ball
+ * sound a beep
+ * then display the number on the LCD screen at the position(2,3)
+ * after that use the speed 150°/s go forward for 2.3 second three times and rotate the hand
+ * stop for 1 second  then backward for 2.3 second 3 times
+ */
+private static void handleRed() {
+
+    Sound.beepSequenceUp();    
+    count.setCountRed(count.getCountRed() + 1);//count the Red once add 1
+    LCD.drawString(&quot;Red = &quot; + count.getCountRed(), 2, 3);
+    speed();
+    for(int i=1;i&lt;=3;i++){
+        forward1();
+    }
+    rotate1();
+    for(int i=1;i&lt;=3;i++){
+        backward1();
+    }
+    backwardadd();
+}
+
+/**
+ * when the color sensor scanning a Black ball
+ * sound a beep
+ * then display the number on the LCD screen at the position(2,4)
+ * after that use the speed 150°/s go forward for 8.9 second and rotate the hand
+ * stop for 1 second then backward for 8.9 second 
+ */
+private static void handleBlack() {
+    Sound.beepSequence();
+    count.setCountBlack(count.getCountBlack() + 1);//count the Black once add 1
+    LCD.drawString(&quot;Black = &quot; + count.getCountBlack(), 2, 4);
+    speed();
+    Motor.A.forward();
+    Motor.B.forward();
+    Delay.msDelay(8900);
+    Motor.A.stop();
+    Motor.B.stop();
+    rotate1();
+    Motor.A.backward();
+    Motor.B.backward();
+    Delay.msDelay(8900);
+    Motor.A.stop();
+    Motor.B.stop();
+    backwardadd();
+
+}
+/**
+ *  when the color sensor scanning others such as a fault or a miss
+ * use the speed 150°/s go forward for 3.6 second and rotate the hand
+ * stop for 1 second then backward for 3.6 second 
+ */
+private static void handleNone() {
+    speed();
+    Motor.A.forward();
+    Motor.B.forward();
+    Delay.msDelay(3600);
+    Motor.A.stop();
+    Motor.B.stop();
+    rotate1();
+    Motor.A.backward();
+    Motor.B.backward();
+    Delay.msDelay(3600);
+    Motor.A.stop();
+    Motor.B.stop();
+    backwardadd();
+
+
+}
+</code></pre><p>}</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/19/Python入门3/" rel="next" title="Python入门3">
+                <i class="fa fa-chevron-left"></i> Python入门3
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Lina">
+            
+              <p class="site-author-name" itemprop="name">Lina</p>
+              <p class="site-description motion-element" itemprop="description">no pains no gains</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Environment"><span class="nav-number">1.</span> <span class="nav-text">Environment:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number">2.</span> <span class="nav-text">Code:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Count-java"><span class="nav-number">2.1.</span> <span class="nav-text">Count.java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sorting-java"><span class="nav-number">2.2.</span> <span class="nav-text">Sorting.java</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lina</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
