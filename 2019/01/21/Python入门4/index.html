@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="python,markdown,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="python可以用来做加减乘除等计算 In [76]:(100+1-10*2)/5Out[76]:16 python2.7 由于版本问题默认取整，所以如果想用float型就就在计算是使用浮点型的数 In [96]:100/2.6Out[96]:38.46153846153846In [97]:100//2.6Out[97]:38.0In [98]:round(100/2.6)Out[98]:38.">
-<meta name="keywords" content="python,markdown">
+<meta name="description" content="bool型  bool型只有两个值 Ture 和 False 注意：首字母要大写的才对True == 1 False == 0 可以与普通数值进行计算  In [25]:True == 1Out[25]:TrueIn [24]:False == 0Out[24]:True由于没有意义 不建议与数值型进行加减乘除 In [27]:100 &amp;gt; 10Out[27]:True这样ok 与and，或o">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python入门2">
-<meta property="og:url" content="http://yoursite.com/2019/01/19/Python入门2/index.html">
+<meta property="og:title" content="Python入门4">
+<meta property="og:url" content="http://yoursite.com/2019/01/21/Python入门4/index.html">
 <meta property="og:site_name" content="Lin&#39;s Blog">
-<meta property="og:description" content="python可以用来做加减乘除等计算 In [76]:(100+1-10*2)/5Out[76]:16 python2.7 由于版本问题默认取整，所以如果想用float型就就在计算是使用浮点型的数 In [96]:100/2.6Out[96]:38.46153846153846In [97]:100//2.6Out[97]:38.0In [98]:round(100/2.6)Out[98]:38.">
+<meta property="og:description" content="bool型  bool型只有两个值 Ture 和 False 注意：首字母要大写的才对True == 1 False == 0 可以与普通数值进行计算  In [25]:True == 1Out[25]:TrueIn [24]:False == 0Out[24]:True由于没有意义 不建议与数值型进行加减乘除 In [27]:100 &amp;gt; 10Out[27]:True这样ok 与and，或o">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-20T13:59:22.000Z">
+<meta property="og:updated_time" content="2019-01-21T15:44:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python入门2">
-<meta name="twitter:description" content="python可以用来做加减乘除等计算 In [76]:(100+1-10*2)/5Out[76]:16 python2.7 由于版本问题默认取整，所以如果想用float型就就在计算是使用浮点型的数 In [96]:100/2.6Out[96]:38.46153846153846In [97]:100//2.6Out[97]:38.0In [98]:round(100/2.6)Out[98]:38.">
+<meta name="twitter:title" content="Python入门4">
+<meta name="twitter:description" content="bool型  bool型只有两个值 Ture 和 False 注意：首字母要大写的才对True == 1 False == 0 可以与普通数值进行计算  In [25]:True == 1Out[25]:TrueIn [24]:False == 0Out[24]:True由于没有意义 不建议与数值型进行加减乘除 In [27]:100 &amp;gt; 10Out[27]:True这样ok 与and，或o">
 
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/19/Python入门2/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/21/Python入门4/">
 
 
 
 
 
-  <title>Python入门2 | Lin's Blog</title>
+  <title>Python入门4 | Lin's Blog</title>
   
 
 
@@ -273,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/19/Python入门2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/21/Python入门4/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lina">
@@ -290,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python入门2</h1>
+          <h1 class="post-title" itemprop="name headline">Python入门4</h1>
         
 
         <div class="post-meta">
@@ -302,8 +301,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-19T16:32:08+01:00">
-                2019-01-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-21T16:43:34+01:00">
+                2019-01-21
               </time>
             
 
@@ -312,28 +311,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -362,32 +339,130 @@
       
 
       
-        <p>python可以用来做加减乘除等计算</p>
-<p>In [76]:<br>(100+1-10*2)/5<br>Out[76]:<br>16</p>
-<p>python2.7 由于版本问题默认取整，所以如果想用float型就就在计算是使用浮点型的数</p>
-<p>In [96]:<br>100/2.6<br>Out[96]:<br>38.46153846153846<br>In [97]:<br>100//2.6<br>Out[97]:<br>38.0<br>In [98]:<br>round(100/2.6)<br>Out[98]:<br>38.0<br>In [100]:<br>round(100/2.6,3)<br>Out[100]:<br>38.462</p>
-<p>取余数%</p>
-<p>In [78]:<br>100%3<br>Out[78]:<br>1<br>乘方**</p>
-<p>In [79]:<br>10**3<br>Out[79]:<br>1000<br>开方</p>
-<p>In [80]:<br>10.0**(1/3.0)<br>Out[80]:<br>2.154434690031884<br>数学计算模块 math</p>
-<p>In [81]:<br>import math<br>In [82]:<br>10 <strong> (1/3)<br>Out[82]:<br>1<br>In [83]:<br>10.0</strong>(1/3.0)<br>Out[83]:<br>2.154434690031884<br>In [84]:<br>math.pi<br>Out[84]:<br>3.141592653589793</p>
-<p>sin 90°</p>
-<p>In [85]:<br>math.sin(math.pi/2.0)<br>Out[85]:<br>1.0<br>向下取整</p>
-<p>In [86]:<br>math.floor(9.777876)<br>Out[86]:<br>9.0<br>向上取整</p>
-<p>In [87]:<br>math.ceil(7.3332332)<br>Out[87]:<br>8.0<br>选中框 按b 就会在下面加行； 按a 则会在上面加行</p>
-<p>In [ ]:<br>在code模式下 # 代表注释</p>
-<p>In [88]:</p>
-<p>#不影响code,但注释很重要<br>print (3.0/5.0)<br>print (1+3)<br>0.6<br>4</p>
-<p>python语义型语言</p>
-<p>In [89]:</p>
-<p>#赋值<br>apple_price = 1.5<br>apple_need_accout = 3<br>apple_sum = apple_price * apple_need_accout<br>print apple_sum<br>4.5</p>
-<p>tab键提示我上面用到的参数</p>
-<p>In [90]:<br>apple_weight = 200<br>weight_sum = apple_need_accout * apple_weight<br>print weight_sum<br>600</p>
-<p>In [91]:</p>
-<p>#输出多个值 用逗号分隔<br>print (apple_sum,apple_need_accout,weight_sum)<br>(4.5, 3, 600)</p>
-<p>format函数：增强的格式化字符串函数</p>
-<p>In [93]:</p>
-<p>#用法 {}<br>“苹果的价格为:{},苹果的重量为:{},苹果的总价为:{}”.format(apple_price,apple_weight,apple_sum)<br>Out[93]:<br>‘\xe8\x8b\xb9\xe6\x9e\x9c\xe7\x9a\x84\xe4\xbb\xb7\xe6\xa0\xbc\xe4\xb8\xba:1.5,\xe8\x8b\xb9\xe6\x9e\x9c\xe7\x9a\x84\xe9\x87\x8d\xe9\x87\x8f\xe4\xb8\xba:200,\xe8\x8b\xb9\xe6\x9e\x9c\xe7\x9a\x84\xe6\x80\xbb\xe4\xbb\xb7\xe4\xb8\xba:4.5’<br>苹果的价格为:1.5,苹果的重量为:200,苹果的总价为:4.5</p>
+        <p>bool型</p>
+<ul>
+<li>bool型只有两个值 Ture 和 False</li>
+<li>注意：首字母要大写的才对<br>True == 1 False == 0 可以与普通数值进行计算</li>
+</ul>
+<p>In [25]:<br>True == 1<br>Out[25]:<br>True<br>In [24]:<br>False == 0<br>Out[24]:<br>True<br>由于没有意义 不建议与数值型进行加减乘除</p>
+<p>In [27]:<br>100 &gt; 10<br>Out[27]:<br>True<br>这样ok</p>
+<p>与and，或or，非not运算</p>
+<p>markdown中表格制作方法 |边框 – 代表首行几个元素 可以在–这行加上冒号 冒号在横线的位置就代表对齐方向 :– 代表左对齐 :–: 代表居中对齐 这是格式</p>
+<p>这是格式</p>
+<table>
+<thead>
+<tr>
+<th>操作符</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&gt;</td>
+<td>大于</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>大于等于</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>小于</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>小于等于</td>
+</tr>
+<tr>
+<td>==</td>
+<td>等于</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>不等于</td>
+</tr>
+<tr>
+<td>is</td>
+<td>相同的对象</td>
+</tr>
+</tbody>
+</table>
+<p>生成效果</p>
+<p>操作符<br>解释</p>
+<blockquote>
+</blockquote>
+<p>大于 </p>
+<blockquote>
+<p>=<br>大于等于<br>&lt;<br>小于<br>&lt;= </p>
+</blockquote>
+<h1 id="小于等于"><a href="#小于等于" class="headerlink" title="小于等于 "></a>小于等于 </h1><p>等于<br>!=<br>不等于<br>is<br>相同的对象<br>字符串型</p>
+<p>字符串可以用单引号和双引号，恰当的使用单双引号，避免使用转义字符(escape)</p>
+<p>连接字符串 +</p>
+<p>In [2]:<br>line_1 = “Hello,”<br>line_2 = ‘World’<br>line_1 + line_2<br>Out[2]:<br>‘Hello,World’<br>字符串的乘法</p>
+<p>In [3]:<br>line_1 *3<br>Out[3]:<br>‘Hello,Hello,Hello,’<br>字符串的长度</p>
+<p>In [4]:<br>len(line_1)<br>Out[4]:<br>6</p>
+<ul>
+<li>字符串是不可变类型的量</li>
+<li>类似指针<br>打印字符串所在的地址 id( ) 返回一个地址识别符</li>
+</ul>
+<p>In [5]:<br>id(line_1)<br>Out[5]:<br>4531953456<br>In [6]:<br>line_1 = ‘aaaa’<br>id(line_1)<br>Out[6]:<br>4531953216<br>存在地址不同了 占用了不同的内存 所以说字符串是不可变的<br>In [7]:<br>line = ‘ni hao’<br>In [8]:<br>line_copy = line<br>In [9]:<br>id(line), id(line_copy)<br>Out[9]:<br>(4536329248, 4536329248)<br>In [10]:<br>line = ‘ppppp’<br>In [11]:<br>id(line),id(line_copy)<br>Out[11]:<br>(4536329728, 4536329248)<br>字符串切片</p>
+<ul>
+<li>从前面取<br>In [38]:<br>#取字符<br>line = ‘wo ai ni’<br>line[:5],line[0:5],line[0:4],line[1:4]<br>Out[38]:<br>(‘wo ai’, ‘wo ai’, ‘wo a’, ‘o a’)<br>冒号前面默认是从0开始</li>
+</ul>
+<p>In [39]:</p>
+<p>#取单个字符<br>line[3],line[0],line[-1]<br>Out[39]:<br>(‘a’, ‘w’, ‘i’)<br>-1代表最后一个字符</p>
+<p>In [40]:</p>
+<p>#隔着取字符<br>line =’abcd efg hijklmn’<br>line[0:10:2], line[:10:1], line[:10:]<br>Out[40]:<br>(‘ac f ‘, ‘abcd efg h’, ‘abcd efg h’)<br>后面默认是1 即每一个字符取一个 所以就是顺序取字符</p>
+<ul>
+<li><p>从后面取<br>In [43]:</p>
+<h1 id="取后10个字符"><a href="#取后10个字符" class="headerlink" title="取后10个字符"></a>取后10个字符</h1><p>line =’abcd efg hijklmn’<br>line[-10:],line[-10:-1]<br>Out[43]:<br>(‘fg hijklmn’, ‘fg hijklm’)<br>意思是从倒数第十个开始一致往后取，一直到最后一个</p>
+</li>
+<li><p>翻转字符串<br>In [36]:<br>line =’abcd efg hijklmm’<br>line[::-1]<br>Out[36]:<br>‘mmlkjih gfe dcba’</p>
+</li>
+<li>单字符不允许进行赋值操作，即不能够修改<br>In [45]:<br>line[-1]<br>Out[45]:<br>‘n’<br>In [46]:<br>line[-1] = ‘b’</li>
+</ul>
+<hr>
+<p>TypeError                                 Traceback (most recent call last)</p>
+<p><ipython-input-46-bb10e4e82a2e> in <module>()<br>—-&gt; 1 line[-1] = ‘b’</module></ipython-input-46-bb10e4e82a2e></p>
+<p>TypeError: ‘str’ object does not support item assignment</p>
+<ul>
+<li><p>字符串中的函数<br>在字符串名称后面按下.再按tab即可看到字符串内置的函数有哪些;在notebook中可以在后面加上？再按shift ＋ Enter 查看函数使用方法</p>
+</li>
+<li><p>capitalize<br>In [48]:<br>#例如<br>line.capitalize?<br>#会弹出来一个框在下面，框里面是使用说明，会看到如下信息<br>Docstring:<br>S.capitalize() -&gt; string<br>Return a copy of the string S with only its first character<br>capitalized.<br>Type:      builtin_function_or_method<br>意思：返回一个字符串，第一个字符大些，剩下的英文字符小写</p>
+</li>
+</ul>
+<p>In [49]:<br>line = ‘wo ai ni’<br>line.capitalize()<br>Out[49]:<br>‘Wo ai ni’<br>In [50]:<br>line = ‘WO AI NI’<br>line.capitalize()<br>Out[50]:<br>‘Wo ai ni’</p>
+<ul>
+<li>center<br>In [51]:<br>#居中<br>line.center(20)<br>Out[51]:<br>‘      WO AI NI      ‘<br>意思：让这个字符串有20个字符，并居中</li>
+</ul>
+<p>In [52]:<br>line.center(20,’$’)<br>Out[52]:<br>‘$$$$$$WO AI NI$$$$$$’<br>第二个参数是补位字符</p>
+<ul>
+<li>count<br>In [55]:<br>#计数<br>line = ‘WO shi shui,ni Lai cai’<br>line.count(‘h’)<br>Out[55]:<br>2<br>In [57]:<br>line.count(‘3’)<br>Out[57]:<br>0</li>
+<li>endswith<br>In [58]:<br>#是否以什么结尾<br>line.endswith(‘cai’)<br>Out[58]:<br>True<br>In [59]:<br>line.endswith(‘ca’)<br>Out[59]:<br>False<br>In [60]:<br>line.endswith(‘i’)<br>Out[60]:<br>True</li>
+<li><p>startwith<br>是否以什么开头，返回True，False</p>
+</li>
+<li><p>find<br>In [62]:<br>#返回第一个为‘xxx’的下标<br>line = ‘WO shi shui,ni Lai cai’<br>line.find(‘i’)<br>Out[62]:<br>5<br>In [63]:<br>#如果字符不存在，返回－1<br>line.find(‘9’)<br>Out[63]:<br>-1</p>
+</li>
+<li>index 与find用法相同，只不过如果字符不存在就会报错<br>In [67]:<br>line.index(‘i’)<br>Out[67]:<br>5<br>In [68]:<br>line.index(‘9’)</li>
+</ul>
+<hr>
+<p>ValueError                                Traceback (most recent call last)</p>
+<p><ipython-input-68-1eaa62f36396> in <module>()<br>—-&gt; 1 line.index(‘9’)</module></ipython-input-68-1eaa62f36396></p>
+<p>ValueError: substring not found</p>
+<ul>
+<li>upper 全部大写 lower 全部小写<br>In [69]:<br>line<br>Out[69]:<br>‘WO shi shui,ni Lai cai’<br>In [70]:<br>line.upper()<br>Out[70]:<br>‘WO SHI SHUI,NI LAI CAI’<br>In [71]:<br>line<br>Out[71]:<br>‘WO shi shui,ni Lai cai’<br>In [72]:<br>line.lower()<br>Out[72]:<br>‘wo shi shui,ni lai cai’</li>
+<li>istitle 判断是不是标题<br>In [75]:<br>line<br>Out[75]:<br>‘WO shi shui,ni Lai cai’<br>In [74]:<br>line.istitle()<br>Out[74]:<br>False<br>判断方法：必须首字母大写 其余小写 才会是title</li>
+</ul>
+<p>In [81]:<br>line = ‘Drrrrr’<br>In [82]:<br>line.istitle()<br>Out[82]:<br>True<br>In [83]:<br>line = ‘De Sw Ae’<br>line.istitle()<br>Out[83]:<br>True</p>
+<ul>
+<li>islower 判断是否全部为小写 isupper 判断是否全部为大写</li>
+<li><p>strip 去掉两端空格空白无效字符<br>In [84]:<br>line = ‘  adkf \n l   \n\t  ‘<br>line.strip()<br>Out[84]:<br>‘adkf \n l’<br>中间的是无法去掉的</p>
+</li>
+<li><p>rstrip 去除右端的</p>
+</li>
+<li>lstrip 去除左侧的</li>
+<li>swapcase 大小写转换<br>In [85]:<br>line = ‘De Sw Ae’<br>line.swapcase()<br>Out[85]:<br>‘dE sW aE’<br>In [ ]:</li>
+</ul>
 
       
     </div>
@@ -403,14 +478,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/python/" rel="tag"># python</a>
-          
-            <a href="/tags/markdown/" rel="tag"># markdown</a>
-          
-        </div>
-      
 
       
       
@@ -420,8 +487,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/19/Python入门1/" rel="next" title="Python入门1">
-                <i class="fa fa-chevron-left"></i> Python入门1
+              <a href="/2019/01/20/lego-code/" rel="next" title="lego-code">
+                <i class="fa fa-chevron-left"></i> lego-code
               </a>
             
           </div>
@@ -430,8 +497,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/19/Python入门3/" rel="prev" title="Python入门3">
-                Python入门3 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/01/21/Python入门5/" rel="prev" title="Python入门5">
+                Python入门5 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -484,8 +551,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -547,6 +623,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#小于等于"><span class="nav-number">1.</span> <span class="nav-text">小于等于 </span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#取后10个字符"><span class="nav-number">2.</span> <span class="nav-text">取后10个字符</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
