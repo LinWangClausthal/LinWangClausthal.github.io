@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Lin&#39;s Blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-01-21T16:11:31.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Lina</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python入门10</title>
+    <link href="http://yoursite.com/2019/01/21/Python%E5%85%A5%E9%97%A810/"/>
+    <id>http://yoursite.com/2019/01/21/Python入门10/</id>
+    <published>2019-01-21T15:57:38.000Z</published>
+    <updated>2019-01-21T16:11:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>类</p><p>In [144]:<br>class Person:</p><pre><code># 初始化,self是实例本身,__inint__()模版函数def __init__( self , name , age ):    #属性    self._name = name    self._age = age</code></pre><p>In [140]:</p><p>#s相当于字符串‘hello’这个类的对象<br>s = ‘hello’<br>s.center(12)<br>Out[140]:<br>‘   hello    ‘<br>In [149]:<br>p = Person(‘Lin’,22)<br>In [150]:<br>p<br>Out[150]:</p><p>&lt;<strong>main</strong>.Person instance at 0x107a32878&gt;<br>In [153]:<br>p = Person(‘Lin’,22)<br>class Person:</p><pre><code># 初始化,self是实例本身def __init__( self , name , age ):    self._name = name    self._age = age#self 就是调用的p 实例本身def get_name(self):    return self._name</code></pre><p>In [154]:<br>p.get_name()<br>Out[154]:<br>‘Lin’<br>In [159]:<br>class Person:</p><pre><code># 初始化,self是实例本身def __init__( self , name , age ):    self._name = name    self._age = age#self 就是调用的p 实例本身def get_name(self):    return self._namedef rename(self, new_name):    self._name = new_name</code></pre><p>下划线的作用：保持隐私，为了用户不会直接访问属性</p><p>初始化函数中，self后面的是实例化对象的属性，加下划线的意思是，代表这个属性是私有的，不应该访问</p><p>In [160]:<br>p_2 = Person(‘Lin’,22)<br>p_2.get_name()<br>Out[160]:<br>‘Lin’<br>In [161]:<br>p_2.rename(‘Wang’)<br>In [162]:<br>p_2.get_name()<br>Out[162]:<br>‘Wang’<br>继承</p><p>In [1]:<br>class Person:</p><pre><code># 初始化,self是实例本身def __init__( self , name , age ):    self._name = name    self._age = age#self 就是调用的p 实例本身def get_name(self):    return self._namedef rename(self, new_name):    self._name = new_name</code></pre><p>In [3]:</p><p>#pass 什么都不做 只是占位<br>class Student(Person):<br>    pass<br>In [4]:<br>s = Student(‘Li’,14)<br>s.get_name()<br>Out[4]:<br>‘Li’<br>In [13]:<br>class Student(Person):<br>    def set_score(self,score):<br>        self._score = score<br>    def get_score(self):<br>        return self._score<br>In [14]:<br>s = Student(‘Li’,14)<br>s.get_name()<br>Out[14]:<br>‘Li’<br>In [15]:<br>s.set_score(99)<br>In [16]:<br>s.get_score()<br>Out[16]:<br>99<br>In [18]:<br>class Person:<br>    def <strong>init</strong>( self , name , age ):<br>        self._name = name<br>        self._age = age</p><pre><code>def name(self):    return self._namedef rename(self, new_name):    self._name = new_name</code></pre><p>In [20]:<br>p = Person(‘Liu’,24)<br>p.name()<br>Out[20]:<br>‘Liu’<br>In [21]:<br>p.name<br>Out[21]:</p><p>&lt;bound method Person.name of &lt;<strong>main</strong>.Person instance at 0x107afe440&gt;&gt;<br>如何才能不用（）就把属性调出来呢？－－－－装饰器property</p><p>In [22]:<br>class Person:<br>    def <strong>init</strong>( self , name , age ):<br>        self._name = name<br>        self._age = age<br>    @property<br>    def name(self):<br>        return self._name</p><pre><code>def rename(self, new_name):    self._name = new_name</code></pre><p>In [23]:<br>p = Person(‘Liu’,24)<br>p.name<br>Out[23]:<br>‘Liu’</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;类&lt;/p&gt;
+&lt;p&gt;In [144]:&lt;br&gt;class Person:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 初始化,self是实例本身,__inint__()模版函数
+def __init__( self , name , age ):
+    #属性
+    self._n
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="note" scheme="http://yoursite.com/categories/python/note/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python入门9</title>
+    <link href="http://yoursite.com/2019/01/21/Python%E5%85%A5%E9%97%A89/"/>
+    <id>http://yoursite.com/2019/01/21/Python入门9/</id>
+    <published>2019-01-21T15:56:51.000Z</published>
+    <updated>2019-01-21T16:11:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>函数</p><p>In [2]:<br>dict = {‘a’ : 100,<br>        ‘b’ : 100,<br>        ‘c’ : 222}<br>In [4]:</p><p>#找a对应的值<br>dict[‘a’]<br>Out[4]:<br>100<br>In [9]:</p><p>#如何找100对应的key呢？</p><p>#用之前的生成器</p><p>#首先用items将字典转化为一个列表<br>dict.items()<br>Out[9]:<br>[(‘a’, 100), (‘c’, 222), (‘b’, 100)]<br>In [10]:</p><p>#构建一个新的列表<br>[key for key, value in dict.items() if value == 100]<br>Out[10]:<br>[‘a’, ‘b’]<br>因为每次查询都需要写，迁移性很差，这里就需要函数了</p><p>In [20]:<br>def get_keys(dict,value):<br>    return [k for k, v in dict.items() if v == value]<br>In [22]:<br>get_keys(dict,222)<br>Out[22]:<br>[‘c’]<br>In [23]:<br>get_keys(dict,100)<br>Out[23]:<br>[‘a’, ‘b’]<br>In [24]:<br>get_keys(dict,1)<br>Out[24]:<br>[]<br>函数是组织好的，可重复使用的，完成特定功能的代码块的抽象</p><p>In [26]:<br>import math<br>math.floor(2.999)#向下取整，只知道它的功能就可以了，不用知道是怎么写的<br>Out[26]:<br>2.0<br>In [28]:<br>get_keys({‘ppp’:333},333)<br>Out[28]:<br>[‘ppp’]<br>In [29]:<br>def get_keys(dict,value):<br>    return [k for k, v in dict.items() if v == value]</p><p>#get_keys() 是函数名</p><p>#dict,value 是两个参数 dict 形参 调用时候传递的值是实参</p><p>#return 是返回值</p><ol><li>位置参数, 必须按照参数顺序</li><li>关键字参数， 可以不按照顺序去写<br>In [36]:<br>#关键字参数<br>get_keys(dict = {‘ppp’:333}, value = 333)<br>Out[36]:<br>[‘ppp’]<br>In [37]:<br>get_keys( value = 333, dict = {‘ppp’:333})<br>Out[37]:<br>[‘ppp’]<br>函数能改变传递的值，那么传进去的值本身会变化么</li></ol><p>In [39]:<br>var = 1<br>def test(variable):<br>    variable = 100<br>    return variable<br>test(var)<br>Out[39]:<br>100<br>In [40]:<br>print var<br>1</p><p>所以不会改变</p><p>In [1]:<br>def test(variable):<br>    variable.append(100)<br>    return variable<br>In [3]:<br>var = []<br>test(var)<br>Out[3]:<br>[100]<br>In [4]:<br>var<br>Out[4]:<br>[100]<br>不建议在函数内对可变变量进行更改 建议用函数返回值重新进行赋值</p><p>In [5]:<br>def test(variable):<br>    temp = [i for i in variable]<br>    temp.append(100)<br>    return temp<br>In [6]:<br>var = []<br>var = test(var)<br>In [7]:<br>var<br>Out[7]:<br>[100]<br>In [8]:<br>var = test(var)<br>In [9]:<br>var<br>Out[9]:<br>[100, 100]<br>In [10]:<br>var = []<br>test(var)<br>Out[10]:<br>[100]<br>In [11]:<br>var<br>Out[11]:<br>[]<br>参数的收集¶</p><p>In [15]:</p><h1 id="表示收集位置参数，-表示收集关键字参数"><a href="#表示收集位置参数，-表示收集关键字参数" class="headerlink" title="*表示收集位置参数，**表示收集关键字参数"></a>*表示收集位置参数，**表示收集关键字参数</h1><p>def test(name, age, *args, **kwargs):<br>    print(name, age, args, kwargs)<br>In [16]:<br>test(‘wang’,12)<br>(‘wang’, 12, (), {})<br>In [17]:<br>test(‘wang’,12,23,’lkl’,[23,333])<br>(‘wang’, 12, (23, ‘lkl’, [23, 333]), {})<br>In [18]:<br>test(‘wang’,12,weight = 120)<br>(‘wang’, 12, (), {‘weight’: 120})<br>In [23]:</p><p>#不会弄这个<br>def test(name, age, <em>args, **kwargs):<br>    print(name, age, </em>args, kwargs)<br>  File “<ipython-input-23-793765c10b3e>“, line 2<br>    print(name, age, *args, kwargs)<br>                     ^<br>SyntaxError: invalid syntax</ipython-input-23-793765c10b3e></p><p>装饰器</p><p>In [24]:<br>a = 10<br>b = [12,12]<br>def test():<br>    print(‘test’)<br>c = test<br>In [25]:<br>c<br>Out[25]:</p><p><function __main__.test=""><br>In [26]:</function></p><p>#查看这个fuction的名字<br>c.<strong>name</strong><br>Out[26]:<br>‘test’</p><ul><li>可以把函数赋值给变量<br>In [27]:<br>#可不可以在函数中返回一个函数呢？<br>def test(func):<br>  return func<br>def func():<br>  print(‘func run’)<br>f = test(func)<br>f.<strong>name</strong><br>Out[27]:<br>‘func’<br>In [28]:<br>f()<br>func run</li><li>函数可以当作函数的返回值进行返回<br>In [89]:<br>import random<br>#返回0-1的float型的随机数<br>random.random()<br>Out[89]:<br>0.24081362838946874<br>In [90]:<br>#返回的浮点值保留3个有效数字<br>def test():<br>  return round(random.random(),3)<br>In [91]:<br>test()<br>Out[91]:<br>0.932<br>弊端 需要大量修改</li></ul><p>python另一个语法糖，装饰器</p><p>In [92]:<br>def test():<br>    return random.random()<br>In [97]:<br>def decorator(func):<br>    def wrapper(*args, **kwargs):</p><pre><code>    #do sth    return func(*args, **kwargs)#do sthreturn wrapper</code></pre><p>In [98]:<br>f = decorator(test)<br>In [99]:<br>f()<br>Out[99]:<br>0.4584131759837461<br>In [96]:<br>f.<strong>name</strong><br>Out[96]:<br>‘wrapper’<br>In [114]:<br>@decorator<br>def test():<br>    return random.random()<br>@decorator<br>def test_2():<br>    return random.random()<em>10<br>def decorator(func):<br>    def wrapper(</em>args, **kwargs):</p><pre><code>    #do sth    return round(func(*args, **kwargs),3)#do sthreturn wrapper</code></pre><p>In [115]:<br>test()<br>Out[115]:<br>0.043<br>In [116]:<br>test_2()<br>Out[116]:<br>8.091<br>在每个函数前加装饰器就可以使用</p><p>装饰器就是为了批量实现函数额外的功能的。既可以保持函数的功能不变，又可以在调用装饰器时实现额外功能。也方便批量修改。</p><p>f = decorator(test_2) #完全等价于装饰器@的写法<br>def test_2():<br>    return random.random()<em>10<br>def decorator(func):<br>    def wrapper(</em>args, **kwargs):</p><pre><code>    #do sth    return round(func(*args, **kwargs),3)#do sthreturn wrapper</code></pre><p>In [137]:<br>f()<br>Out[137]:<br>5.765<br>In [136]:<br>f()<br>Out[136]:<br>3.862<br>In [ ]:</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;函数&lt;/p&gt;
+&lt;p&gt;In [2]:&lt;br&gt;dict = {‘a’ : 100,&lt;br&gt;        ‘b’ : 100,&lt;br&gt;        ‘c’ : 222}&lt;br&gt;In [4]:&lt;/p&gt;
+&lt;p&gt;#找a对应的值&lt;br&gt;dict[‘a’]&lt;br&gt;Out[4]:&lt;br&gt;
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="note" scheme="http://yoursite.com/categories/python/note/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python入门8</title>
+    <link href="http://yoursite.com/2019/01/21/Python%E5%85%A5%E9%97%A88/"/>
+    <id>http://yoursite.com/2019/01/21/Python入门8/</id>
+    <published>2019-01-21T15:51:51.000Z</published>
+    <updated>2019-01-21T16:11:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>循环</p><ul><li>for 遍历循环</li><li>while 条件循环<br>In [46]:<br>costs = [3,4,5,33,234,456]<br>for cost in costs:<br>  print{‘xiao fei shi {} yuan’.format(str(cost).center(4))}# 详见 center 的用法<br>  print{‘xiao fei shi {} yuan’.format(cost)}<br>set([‘xiao fei shi  3   yuan’])<br>set([‘xiao fei shi 3 yuan’])<br>set([‘xiao fei shi  4   yuan’])<br>set([‘xiao fei shi 4 yuan’])<br>set([‘xiao fei shi  5   yuan’])<br>set([‘xiao fei shi 5 yuan’])<br>set([‘xiao fei shi  33  yuan’])<br>set([‘xiao fei shi 33 yuan’])<br>set([‘xiao fei shi 234  yuan’])<br>set([‘xiao fei shi 234 yuan’])<br>set([‘xiao fei shi 456  yuan’])<br>set([‘xiao fei shi 456 yuan’])</li></ul><p>生成一个长度为20的随机列表</p><p>notebook小技巧：shift+enter 执行，然后到下一个框； ctrl+enter 在本运行框反复执行</p><p>In [63]:</p><p>#生成1到10的随机数<br>import random<br>random.randint(1,10)<br>Out[63]:<br>8<br>In [67]:<br>import random<br>random_numbers = []<br>while len(random_numbers) &lt; 20:<br>    random_numbers.append(random.randint(1,10))#插入随机数<br>print(random_numbers,len(random_numbers))<br>([4, 9, 3, 2, 4, 4, 1, 6, 5, 8, 9, 7, 3, 10, 10, 1, 5, 10, 7, 4], 20)</p><p>只要能使用for循环，就不要使用while循环</p><p>In [74]:</p><p>#range函数的使用 长度为20从0开始的列表<br>range(20)<br>Out[74]:<br>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]<br>In [76]:<br>list(range(20))<br>Out[76]:<br>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]<br>In [77]:<br>import random<br>random_numbers = []<br>for i in range(20):<br>    random_numbers.append(random.randint(1,10))<br>print(random_numbers,len(random_numbers))<br>([7, 5, 10, 5, 3, 9, 9, 7, 2, 4, 8, 9, 1, 4, 8, 2, 7, 2, 6, 2], 20)</p><h3 id="因为while循环容易成为死循环"><a href="#因为while循环容易成为死循环" class="headerlink" title="因为while循环容易成为死循环"></a>因为while循环容易成为死循环</h3><p>必须用while的情况：当循环的条件跟数量没有关系时，只能用while</p><p>e.g. 往空列表中添加随机数，直到添加的数为9，则终止</p><p>In [91]:<br>import random<br>random_numbers = []<br>while 9 not in random_numbers:<br>    random_numbers.append(random.randint(1,10))<br>print(random_numbers,len(random_numbers))<br>([5, 8, 4, 10, 2, 10, 7, 9], 8)</p><p>可以运行多次看结果</p><p>如果在notebook中出现死循环，可以选中框，然后在上面菜单栏有停止按钮</p><p>In [104]:</p><p>#死循环演示<br>import time<br>number = 0<br>while True:<br>    time.sleep(1)   #运行一次休息一秒<br>    number += 1<br>    print(‘hello {}’.format(number))<br>hello 1<br>hello 2<br>hello 3<br>hello 4<br>hello 5</p><hr><p>KeyboardInterrupt                         Traceback (most recent call last)</p><p><ipython-input-104-264c48642635> in <module>()<br>      3 number = 0<br>      4 while True:<br>—-&gt; 5     time.sleep(1)   #运行一次休息一秒<br>      6     number += 1<br>      7     print(‘hello {}’.format(number))</module></ipython-input-104-264c48642635></p><p>KeyboardInterrupt: </p><p>只有一个元素的列表</p><p>In [92]:<br>a = []<br>b = ()<br>type(a), type(b)<br>Out[92]:<br>(list, tuple)<br>In [93]:<br>a = [1]<br>b = (1)<br>type(a), type(b), b<br>Out[93]:<br>(list, int, 1)<br>问题：a=[1,2,3], b = 1, c = (b in a) , c是一个什么类型，是元组么？ 答：不是，c 是 bool 型</p><p>In [95]:<br>a = [1]<br>b = (1,)<br>type(a), type(b), b , len(b)<br>Out[95]:<br>(list, tuple, (1,), 1)<br>In [ ]:</p><p>打印基数和偶数</p><p>random_numbers<br>Out[105]:<br>[5, 8, 4, 10, 2, 10, 7, 9]<br>In [106]:</p><p>#打印random_numbers里面的基数和偶数<br>for number in random_numbers:<br>    if number % 2 == 0:<br>        print(‘{} is double’.format(number))<br>    else:<br>        print(‘{} is single’.format(number))<br>5 is single<br>8 is double<br>4 is double<br>10 is double<br>2 is double<br>10 is double<br>7 is single<br>9 is single</p><p>cotinue 和 break 跳出循环</p><p>In [109]:</p><p>#打印random_numbers里面的偶数, 跳过基数<br>for number in random_numbers:<br>    if number % 2 == 0:<br>        print(‘{} is double’.format(number))<br>    else:<br>        continue<br>    print(‘no jump’)<br>8 is double<br>no jump<br>4 is double<br>no jump<br>10 is double<br>no jump<br>2 is double<br>no jump<br>10 is double<br>no jump</p><p>In [111]:<br>random_numbers = [2,4,8,1,16]</p><p>#打印random_numbers找到第一个基数就不运行了<br>for number in random_numbers:<br>    if number % 2 == 0:<br>        print(‘{} is double’.format(number))<br>    else:<br>        break<br>    print(‘no stop’)<br>2 is double<br>no stop<br>4 is double<br>no stop<br>8 is double<br>no stop</p><p>In [116]:<br>random_numbers = [2,4,8,16]</p><p>#打印random_numbers找到第一个基数就不运行了<br>for number in random_numbers:<br>    if number % 2 == 0:<br>        print(‘{} is double’.format(number))<br>    else:<br>        break<br>    print(‘no stop’)<br>else:<br>    print(‘!!!!all are double!!!!’)<br>2 is double<br>no stop<br>4 is double<br>no stop<br>8 is double<br>no stop<br>16 is double<br>no stop<br>!!!!all are double!!!!</p><p>如果在循环过程中，没有碰到break语句，就会执行else里的代码。</p><p>for循环 可以构建推导式</p><p>所谓推导式 就是从一个数据序列构建另一个数据序列的方法</p><p>In [117]:<br>random_numbers = list(range(10))<br>random_numbers<br>Out[117]:<br>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br>In [118]:<br>new_numbers = []<br>for number in random_numbers:<br>    new_numbers.append(number * 10)<br>new_numbers<br>Out[118]:<br>[0, 10, 20, 30, 40, 50, 60, 70, 80, 90]<br>列表推导式</p><p>In [119]:<br>new_numbers = [number *10 for number in random_numbers]<br>new_numbers<br>Out[119]:<br>[0, 10, 20, 30, 40, 50, 60, 70, 80, 90]<br>字典推导式</p><p>In [120]:<br>dict_numbers = {number:’A’ for number in random_numbers}<br>dict_numbers<br>Out[120]:<br>{0: ‘A’,<br> 1: ‘A’,<br> 2: ‘A’,<br> 3: ‘A’,<br> 4: ‘A’,<br> 5: ‘A’,<br> 6: ‘A’,<br> 7: ‘A’,<br> 8: ‘A’,<br> 9: ‘A’}<br>In [124]:</p><p>#元组是否有推导式？？<br>tuple_numbers = (number *10 for number in random_numbers)<br>tuple_numbers<br>Out[124]:</p><p>&lt;generator object <genexpr> at 0x10622a9b0&gt;<br>这个输出结果，代表了什么？</genexpr></p><p>生成器</p><p>In [122]:<br>list(tuple_numbers)<br>Out[122]:<br>[0, 10, 20, 30, 40, 50, 60, 70, 80, 90]<br>刚才的tuple_numbers就是被生成器list/tuple生成的<br>生成器只能生成一次</p><p>In [125]:</p><p>#第一次<br>tuple(tuple_numbers)<br>Out[125]:<br>(0, 10, 20, 30, 40, 50, 60, 70, 80, 90)<br>In [126]:</p><p>#第二次<br>tuple(tuple_numbers)<br>Out[126]:<br>()<br>In [128]:</p><p>#与tuple()效果相同<br>list(tuple_numbers)<br>Out[128]:<br>[]<br>In [ ]:</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;循环&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;for 遍历循环&lt;/li&gt;
+&lt;li&gt;while 条件循环&lt;br&gt;In [46]:&lt;br&gt;costs = [3,4,5,33,234,456]&lt;br&gt;for cost in costs:&lt;br&gt;  print{‘xiao fei shi {} 
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="note" scheme="http://yoursite.com/categories/python/note/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python入门7</title>
+    <link href="http://yoursite.com/2019/01/21/Python%E5%85%A5%E9%97%A87/"/>
+    <id>http://yoursite.com/2019/01/21/Python入门7/</id>
+    <published>2019-01-21T15:45:57.000Z</published>
+    <updated>2019-01-21T16:11:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>条件判断</p><p>伪代码<br>if condition:<br>    do something<br>else<br>    do something<br>In [25]:<br>total_cost = 32.5<br>if total_cost &gt; 30:<br>    discount = 0.9<br>else:<br>    discount = 1<br>total_cost *= discount<br>print(‘total_cost is {}’.format(total_cost))<br>total_cost is 29.25</p><p>In [27]:<br>total_cost = 32.5<br>if total_cost &gt; 30:<br>    discount = 0.9</p><pre><code>#else if----&gt; elif</code></pre><p>elif total_cost &gt; 50:<br>    discount = 0.8<br>else:<br>    discount = 1<br>total_cost *= discount<br>print(‘total_cost is {}’.format(total_cost))<br>total_cost is 29.25</p><ol><li>条件判断可以任意组合<ul><li>elif可以有0到任意多个，else可有可无</li><li>条件判断可以嵌套</li></ul></li><li>condition<br>In [28]:<br>#实际上不这么用bool去显示转换它<br>bool(‘’),bool({}),bool([])<br>Out[28]:<br>(False, False, False)<br>In [29]:<br>#空的字符串<br>condition = ‘’<br>if condition:<br> print(‘True’)<br>else:<br> print(‘False’)<br>False</li></ol><p>In [30]:</p><p>#有长度的字符串<br>condition = ‘d d d’<br>if condition:<br>    print(‘True’)<br>else:<br>    print(‘False’)<br>True</p><p>In [31]:</p><p>#空的列表<br>condition = []<br>if condition:<br>    print(‘True’)<br>else:<br>    print(‘False’)<br>False</p><p>In [32]:</p><p>#有元素的列表<br>condition = [1,2,3]<br>if condition:<br>    print(‘True’)<br>else:<br>    print(‘False’)<br>True</p><p>一个值被当成bool值，更像是从有和无的角度来讲</p><p>and or not</p><p>In [33]:<br>bool_1 = True<br>bool_2 = False<br>In [34]:<br>print(‘bool_1 and bool_2 is {}’.format(bool_1 and bool_2))<br>bool_1 and bool_2 is False</p><p>In [35]:<br>print(‘bool_1 or bool_2 is {}’.format(bool_1 or bool_2))<br>bool_1 or bool_2 is True</p><p>In [36]:<br>print(‘ not bool_1 is {}’.format(not bool_1))<br> not bool_1 is False</p><p>In [37]:</p><p>#其他类型的变量 不是bool型的情况，返回的是个实际的值<br>bool_3 = ‘hello’<br>bool_4 = [1,2,3]<br>In [38]:</p><h1 id="返回bool-4"><a href="#返回bool-4" class="headerlink" title="返回bool_4"></a>返回bool_4</h1><p>print(‘bool_3 and bool_4 is {}’.format(bool_3 and bool_4))</p><h1 id="返回bool-3，不会进行bool-4的结果"><a href="#返回bool-3，不会进行bool-4的结果" class="headerlink" title="返回bool_3，不会进行bool_4的结果"></a>返回bool_3，不会进行bool_4的结果</h1><p>print(‘bool_3 or bool_4 is {}’.format(bool_3 or bool_4))<br>bool_3 and bool_4 is [1, 2, 3]<br>bool_3 or bool_4 is hello</p><p>断言assert －－条件判断的近亲</p><ul><li>调试程序时会用到<br>#伪代码<br>if not condition:<br>  crash program<br>  意思是如果不是这种情况则崩溃<br>In [41]:<br>age = 18<br>assert age == 18<br>In [42]:<br>age = 19<br>assert age == 18</li></ul><hr><p>AssertionError                            Traceback (most recent call last)</p><p><ipython-input-42-071d61ae2e14> in <module>()<br>      1 age = 19<br>—-&gt; 2 assert age == 18</module></ipython-input-42-071d61ae2e14></p><p>AssertionError:</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;条件判断&lt;/p&gt;
+&lt;p&gt;伪代码&lt;br&gt;if condition:&lt;br&gt;    do something&lt;br&gt;else&lt;br&gt;    do something&lt;br&gt;In [25]:&lt;br&gt;total_cost = 32.5&lt;br&gt;if total_cost &amp;gt; 3
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="note" scheme="http://yoursite.com/categories/python/note/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python入门6</title>
+    <link href="http://yoursite.com/2019/01/21/Python%E5%85%A5%E9%97%A86/"/>
+    <id>http://yoursite.com/2019/01/21/Python入门6/</id>
+    <published>2019-01-21T15:45:19.000Z</published>
+    <updated>2019-01-21T16:10:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>tuple元组：不可变类型的列表</p><p>In [50]:<br>var = tuple()<br>type(var)<br>Out[50]:<br>tuple<br>In [51]:</p><p>#一样的<br>var = ()<br>type(var)<br>Out[51]:<br>tuple<br>In [52]:<br>var = (1111,23,45,43,[32323,333,12])<br>In [53]:<br>var.count(2)<br>Out[53]:<br>0<br>In [55]:</p><p>#计数<br>var.count(23)<br>Out[55]:<br>1<br>In [56]:</p><p>#位置<br>var.index(23)<br>Out[56]:<br>1<br>In [57]:<br>a, b = 10, 20<br>a<br>Out[57]:<br>10<br>In [58]:<br>b<br>Out[58]:<br>20<br>意思其实就是（a,b）= (10, 20)</p><p>In [59]:<br>a = 11,21<br>In [60]:<br>a<br>Out[60]:<br>(11, 21)<br>元组变量<br>字符变量<br>列表变量<br>tuple_1 = [1,2,3,4,5]<br>str_1 = ‘ab cd’<br>list_1 = [1,2,3,4,5]<br>tuple_2 = [5,2,8,4,1]<br>str_2 = ‘aaab cccd’<br>list_2 = [2,7,3,5,1]<br>函数<br>元组<br>实例<br>字符串<br>实例<br>列表<br>实例</p><ul><li><ul><li>&lt; &gt;<br>true<br>tuple_1＋tuple_2<br>true<br>str_1+str_2<br>true<br>list_1+list_2</li></ul></li></ul><p>[index]<br>true<br>tuple_1[0]<br>true<br>str_1[0]<br>true<br>list_1[0]<br>列表可以索引赋值，字符串和元组不行<br>[ : : ] len bool count index<br>true<br>len(tuple_1)<br>true<br>str_1[0:10:2]<br>true<br>list_2.index(1)<br>空的字符串/列表元/组转换为bool型是False<br>replace</p><p>true<br>str_2.replace(‘a’,’A’)</p><p>字符串replace函数返回一个新的字符串，原来的值不变<br>sort reverse append extend remove pop</p><p>true<br>list_1.reverse()<br>字符串不可更改，只能通过生存一个新的字符串来翻转<br>字典类型</p><p>In [61]:<br>var = {}<br>type(var)<br>Out[61]:<br>dict<br>In [62]:<br>var = dict()<br>type(var)<br>Out[62]:<br>dict<br>In [72]:<br>var = {‘p’:100,<br>      ‘z’:200}<br>In [73]:<br>var[‘p’]<br>Out[73]:<br>100<br>In [74]:<br>words = [‘p’,’z’]<br>location = [100,200]<br>location[words.index(‘p’)]<br>Out[74]:<br>100<br>字典就是解决这种繁琐的从两列表里面映射的东西</p><p>zip拉锁函数</p><p>In [75]:<br>zip(words, location)<br>Out[75]:<br>[(‘p’, 100), (‘z’, 200)]<br>In [76]:<br>list(zip(words,location))<br>Out[76]:<br>[(‘p’, 100), (‘z’, 200)]<br>In [77]:<br>new_var = list(zip(words,location))<br>In [78]:<br>dict(new_var)<br>Out[78]:<br>{‘p’: 100, ‘z’: 200}<br>In [79]:<br>list(zip([1,2],[3,4],[5,6]))<br>Out[79]:<br>[(1, 3, 5), (2, 4, 6)]<br>In [84]:<br>list(zip([1,2,5],[3,4,8],[5,6,0]))<br>Out[84]:<br>[(1, 3, 5), (2, 4, 6), (5, 8, 0)]<br>zip只取等长的，长度不一致是取不到的</p><p>In [85]:<br>list(zip([1,2,5],[3,4,8],[5,6,]))<br>Out[85]:<br>[(1, 3, 5), (2, 4, 6)]</p><h1 id="生成一个字典，给列表里面每个赋值"><a href="#生成一个字典，给列表里面每个赋值" class="headerlink" title="生成一个字典，给列表里面每个赋值"></a>生成一个字典，给列表里面每个赋值</h1><p>students = [‘aa’,’bb’,’cc’,’dd’,’ee’]<br>dict.fromkeys(students, 10)<br>Out[2]:<br>{‘aa’: 10, ‘bb’: 10, ‘cc’: 10, ‘dd’: 10, ‘ee’: 10}<br>In [3]:<br>money = dict.fromkeys(students, 10)<br>In [4]:<br>money<br>Out[4]:<br>{‘aa’: 10, ‘bb’: 10, ‘cc’: 10, ‘dd’: 10, ‘ee’: 10}<br>In [5]:<br>money[‘aa’]<br>Out[5]:<br>10<br>In [6]:</p><p>#get如果找不到就加一个<br>a = money.get(‘ss’,1000)</p><p>字典里的一些函数用法<br>In [10]:<br>money.keys()<br>Out[10]:<br>[‘aa’, ‘cc’, ‘dd’, ‘ee’, ‘bb’]<br>In [8]:<br>print(a)<br>1000</p><p>In [11]:<br>money.values()<br>Out[11]:<br>[10, 10, 10, 10, 10]<br>In [12]:<br>money.items()<br>Out[12]:<br>[(‘aa’, 10), (‘cc’, 10), (‘dd’, 10), (‘ee’, 10), (‘bb’, 10)]<br>In [13]:</p><p>#删除<br>money.pop(‘cc’)<br>Out[13]:<br>10<br>In [14]:<br>money<br>Out[14]:<br>{‘aa’: 10, ‘bb’: 10, ‘dd’: 10, ‘ee’: 10}<br>In [15]:</p><p>#可以赋值，但是如果不存在的这么找是不可以的<br>money[‘ff’]=10000<br>In [16]:<br>money<br>Out[16]:<br>{‘aa’: 10, ‘bb’: 10, ‘dd’: 10, ‘ee’: 10, ‘ff’: 10000}<br>In [17]:</p><h2 id="money-‘gg’"><a href="#money-‘gg’" class="headerlink" title="money[‘gg’]"></a>money[‘gg’]</h2><p>KeyError                                  Traceback (most recent call last)</p><p><ipython-input-17-ac2c4a0abe29> in <module>()<br>—-&gt; 1 money[‘gg’]</module></ipython-input-17-ac2c4a0abe29></p><p>KeyError: ‘gg’</p><p>In [18]:</p><p>#赋值对应的函数,如果存在就返回对应的值，不存在就加上这个值<br>money.setdefault(‘aa’,111111)<br>Out[18]:<br>10<br>In [19]:<br>money<br>Out[19]:<br>{‘aa’: 10, ‘bb’: 10, ‘dd’: 10, ‘ee’: 10, ‘ff’: 10000}<br>In [20]:<br>money.setdefault(‘KKK’,111111)<br>Out[20]:<br>111111<br>In [21]:<br>money<br>Out[21]:<br>{‘KKK’: 111111, ‘aa’: 10, ‘bb’: 10, ‘dd’: 10, ‘ee’: 10, ‘ff’: 10000}</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;tuple元组：不可变类型的列表&lt;/p&gt;
+&lt;p&gt;In [50]:&lt;br&gt;var = tuple()&lt;br&gt;type(var)&lt;br&gt;Out[50]:&lt;br&gt;tuple&lt;br&gt;In [51]:&lt;/p&gt;
+&lt;p&gt;#一样的&lt;br&gt;var = ()&lt;br&gt;type(var)&lt;br&gt;O
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="note" scheme="http://yoursite.com/categories/python/note/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python入门5</title>
+    <link href="http://yoursite.com/2019/01/21/Python%E5%85%A5%E9%97%A85/"/>
+    <id>http://yoursite.com/2019/01/21/Python入门5/</id>
+    <published>2019-01-21T15:44:40.000Z</published>
+    <updated>2019-01-21T16:10:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>列表</p><p>In [1]:<br>1</p><p>#空列表<br>2<br>array = []<br>3<br>array = list()<br>第二行与第三行效果相同</p><ul><li>列表可以容纳任意数量的对象，任意类型的对象</li><li>列表是可变类型<br>In [3]:<br>array = [1,2,3,’wo ai ni’,[],[‘aaa’,’bbb’]]<br>array<br>Out[3]:<br>[1, 2, 3, ‘wo ai ni’, [], [‘aaa’, ‘bbb’]]<br>填充列表 append</li></ul><p>In [7]:<br>1<br>array =[]<br>2<br>array.append(1)<br>3<br>array<br>Out[7]:<br>[1]<br>In [8]:<br>array.append(2)<br>array<br>Out[8]:<br>[1, 2]<br>In [10]:<br>array.append(‘aaa’)<br>array.append(‘aaa’)<br>array<br>Out[10]:<br>[1, 2, ‘aaa’, ‘aaa’]<br>In [12]:<br>array.append(‘bbb’)<br>In [13]:<br>array<br>Out[13]:<br>[1, 2, ‘aaa’, ‘aaa’, ‘bbb’]<br>In [14]:</p><p>#访问第0个<br>array[0]<br>Out[14]:<br>1<br>In [15]:</p><p>#修改第0个<br>array[0] = 10<br>array<br>Out[15]:<br>[10, 2, ‘aaa’, ‘aaa’, ‘bbb’]</p><p>python时一种动态类型的语言，一个变量是什么类型，要看程序运行中变量所代表的值是什么</p><p>In [1]:</p><p>#查看对象类型 type（）<br>var = 10<br>type(var)<br>Out[1]:<br>int<br>In [2]:<br>var = ‘str’<br>type(var)<br>Out[2]:<br>str<br>切片 （与字符串的操作相同）</p><p>In [5]:<br>array = [1,2,3,’wo ai ni’,[],[‘aaa’,’bbb’]]<br>array<br>Out[5]:<br>[1, 2, 3, ‘wo ai ni’, [], [‘aaa’, ‘bbb’]]<br>In [6]:</p><p>#取值<br>array[-2:]<br>Out[6]:<br>[[], [‘aaa’, ‘bbb’]]<br>In [8]:<br>array + [222,’qqqqq’]<br>Out[8]:<br>[1, 2, 3, ‘wo ai ni’, [], [‘aaa’, ‘bbb’], 222, ‘qqqqq’]<br>In [9]:<br>array * 2<br>Out[9]:<br>[1,<br> 2,<br> 3,<br> ‘wo ai ni’,<br> [],<br> [‘aaa’, ‘bbb’],<br> 1,<br> 2,<br> 3,<br> ‘wo ai ni’,<br> [],<br> [‘aaa’, ‘bbb’]]<br>序列</p><ul><li>列表是一种容器型的序列</li><li>字符串是一种扁平型的序列<br>In [12]:<br>array<br>Out[12]:<br>[1, 2, 3, ‘wo ai ni’, [], [‘aaa’, ‘bbb’]]<br>In [13]:<br>len(array)<br>Out[13]:<br>6<br>In [14]:<br>#没有返回值，而是修改了列表对象本身，增加一个值（与字符串本质不同）<br>array.append(3)<br>array<br>Out[14]:<br>[1, 2, 3, ‘wo ai ni’, [], [‘aaa’, ‘bbb’], 3]<br>In [21]:<br>#清空(只有python3才有clear())<br>#移除对应值的字符 只是第一个匹配的被移除，不存在就会报错<br>array.remove(1)<br>In [22]:<br>array<br>Out[22]:<br>[2, 3, ‘wo ai ni’, [], [‘aaa’, ‘bbb’], 3]<br>In [25]:<br>array.remove(‘wo ai ni’)<br>array<br>Out[25]:<br>[2, 3, [], [‘aaa’, ‘bbb’], 3]<br>In [26]:<br>#拷贝，只有python3才有copy() 即建一个相同副本 new_array = array.copy() 这样做的目的见下面<br>#首先有一个序列array<br>array<br>Out[26]:<br>[2, 3, [], [‘aaa’, ‘bbb’], 3]<br>In [27]:<br>#一个新的序列array_new，把array的值赋给array_new<br>array_new = array<br>In [28]:<br>#输出array_new<br>array_new<br>Out[28]:<br>[2, 3, [], [‘aaa’, ‘bbb’], 3]<br>In [29]:<br>#修改array_new第一个的数据<br>array_new[0] = ‘xiu gai’<br>In [30]:<br>#输出发现修改成功了<br>array_new<br>Out[30]:<br>[‘xiu gai’, 3, [], [‘aaa’, ‘bbb’], 3]<br>In [31]:<br>#但是同时发现原来的序列array也被修改了<br>array<br>Out[31]:<br>[‘xiu gai’, 3, [], [‘aaa’, ‘bbb’], 3]<br>因为如果不建立副本就会造成原来的序列也发生了变化，因为这两个名字array和array_new用的是同一段序列</li></ul><p>这里还涉及到深复制和浅复制，深复制就如上面说的 用copy()来解决单个的赋值修改，但当修改的部分被放倒另一个序列中时，相当于对于指针中的值进行修改，那么对于原来没有被copy过的序列也会被修改。</p><ul><li>连接列表除了加操作还可以用extend<br>In [33]:<br>a = [1,2,3]<br>b = [‘aa’,’bb’]<br>In [34]:<br>a + b<br>Out[34]:<br>[1, 2, 3, ‘aa’, ‘bb’]<br>a和b相加返回一个新的列表</li></ul><p>In [36]:</p><p>#拼接<br>a.extend(b)<br>a<br>Out[36]:<br>[1, 2, 3, ‘aa’, ‘bb’]<br>就是把b连接到a上 改变了a</p><p>In [37]:<br>a<br>Out[37]:<br>[1, 2, 3, ‘aa’, ‘bb’]<br>In [39]:</p><p>#插入,前面一个位置添加<br>a.insert(0,11111)<br>In [40]:<br>a<br>Out[40]:<br>[11111, 1, 2, 3, ‘aa’, ‘bb’]<br>In [41]:</p><p>#默认弹出/删掉末尾的值 并返回<br>a.pop()<br>Out[41]:<br>‘bb’<br>In [42]:<br>a<br>Out[42]:<br>[11111, 1, 2, 3, ‘aa’]<br>In [43]:</p><p>#也可以传值进行弹出<br>a.pop(0)<br>Out[43]:<br>11111<br>In [44]:<br>a<br>Out[44]:<br>[1, 2, 3, ‘aa’]<br>In [47]:</p><p>#排序函数 sort<br>array = [45,21,1,0,23,’bbb’,’aaa’,’a’]<br>array.sort()<br>array<br>Out[47]:<br>[0, 1, 21, 23, 45, ‘a’, ‘aaa’, ‘bbb’]<br>In [48]:</p><p>#反转<br>array.sort(reverse=True)<br>array<br>Out[48]:<br>[‘bbb’, ‘aaa’, ‘a’, 45, 23, 21, 1, 0]<br>In [49]:</p><p>#判断一个值是否在列表中<br>1 in array<br>Out[49]:<br>True<br>In [ ]:</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;列表&lt;/p&gt;
+&lt;p&gt;In [1]:&lt;br&gt;1&lt;/p&gt;
+&lt;p&gt;#空列表&lt;br&gt;2&lt;br&gt;array = []&lt;br&gt;3&lt;br&gt;array = list()&lt;br&gt;第二行与第三行效果相同&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;列表可以容纳任意数量的对象，任意类型的对象&lt;/li&gt;
+&lt;li&gt;列
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="note" scheme="http://yoursite.com/categories/python/note/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python入门4</title>
+    <link href="http://yoursite.com/2019/01/21/Python%E5%85%A5%E9%97%A84/"/>
+    <id>http://yoursite.com/2019/01/21/Python入门4/</id>
+    <published>2019-01-21T15:43:34.000Z</published>
+    <updated>2019-01-21T16:10:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>bool型</p><ul><li>bool型只有两个值 Ture 和 False</li><li>注意：首字母要大写的才对<br>True == 1 False == 0 可以与普通数值进行计算</li></ul><p>In [25]:<br>True == 1<br>Out[25]:<br>True<br>In [24]:<br>False == 0<br>Out[24]:<br>True<br>由于没有意义 不建议与数值型进行加减乘除</p><p>In [27]:<br>100 &gt; 10<br>Out[27]:<br>True<br>这样ok</p><p>与and，或or，非not运算</p><p>markdown中表格制作方法 |边框 – 代表首行几个元素 可以在–这行加上冒号 冒号在横线的位置就代表对齐方向 :– 代表左对齐 :–: 代表居中对齐 这是格式</p><p>这是格式</p><table><thead><tr><th>操作符</th><th>解释</th></tr></thead><tbody><tr><td>&gt;</td><td>大于</td></tr><tr><td>&gt;=</td><td>大于等于</td></tr><tr><td>&lt;</td><td>小于</td></tr><tr><td>&lt;=</td><td>小于等于</td></tr><tr><td>==</td><td>等于</td></tr><tr><td>!=</td><td>不等于</td></tr><tr><td>is</td><td>相同的对象</td></tr></tbody></table><p>生成效果</p><p>操作符<br>解释</p><blockquote></blockquote><p>大于 </p><blockquote><p>=<br>大于等于<br>&lt;<br>小于<br>&lt;= </p></blockquote><h1 id="小于等于"><a href="#小于等于" class="headerlink" title="小于等于 "></a>小于等于 </h1><p>等于<br>!=<br>不等于<br>is<br>相同的对象<br>字符串型</p><p>字符串可以用单引号和双引号，恰当的使用单双引号，避免使用转义字符(escape)</p><p>连接字符串 +</p><p>In [2]:<br>line_1 = “Hello,”<br>line_2 = ‘World’<br>line_1 + line_2<br>Out[2]:<br>‘Hello,World’<br>字符串的乘法</p><p>In [3]:<br>line_1 *3<br>Out[3]:<br>‘Hello,Hello,Hello,’<br>字符串的长度</p><p>In [4]:<br>len(line_1)<br>Out[4]:<br>6</p><ul><li>字符串是不可变类型的量</li><li>类似指针<br>打印字符串所在的地址 id( ) 返回一个地址识别符</li></ul><p>In [5]:<br>id(line_1)<br>Out[5]:<br>4531953456<br>In [6]:<br>line_1 = ‘aaaa’<br>id(line_1)<br>Out[6]:<br>4531953216<br>存在地址不同了 占用了不同的内存 所以说字符串是不可变的<br>In [7]:<br>line = ‘ni hao’<br>In [8]:<br>line_copy = line<br>In [9]:<br>id(line), id(line_copy)<br>Out[9]:<br>(4536329248, 4536329248)<br>In [10]:<br>line = ‘ppppp’<br>In [11]:<br>id(line),id(line_copy)<br>Out[11]:<br>(4536329728, 4536329248)<br>字符串切片</p><ul><li>从前面取<br>In [38]:<br>#取字符<br>line = ‘wo ai ni’<br>line[:5],line[0:5],line[0:4],line[1:4]<br>Out[38]:<br>(‘wo ai’, ‘wo ai’, ‘wo a’, ‘o a’)<br>冒号前面默认是从0开始</li></ul><p>In [39]:</p><p>#取单个字符<br>line[3],line[0],line[-1]<br>Out[39]:<br>(‘a’, ‘w’, ‘i’)<br>-1代表最后一个字符</p><p>In [40]:</p><p>#隔着取字符<br>line =’abcd efg hijklmn’<br>line[0:10:2], line[:10:1], line[:10:]<br>Out[40]:<br>(‘ac f ‘, ‘abcd efg h’, ‘abcd efg h’)<br>后面默认是1 即每一个字符取一个 所以就是顺序取字符</p><ul><li><p>从后面取<br>In [43]:</p><h1 id="取后10个字符"><a href="#取后10个字符" class="headerlink" title="取后10个字符"></a>取后10个字符</h1><p>line =’abcd efg hijklmn’<br>line[-10:],line[-10:-1]<br>Out[43]:<br>(‘fg hijklmn’, ‘fg hijklm’)<br>意思是从倒数第十个开始一致往后取，一直到最后一个</p></li><li><p>翻转字符串<br>In [36]:<br>line =’abcd efg hijklmm’<br>line[::-1]<br>Out[36]:<br>‘mmlkjih gfe dcba’</p></li><li>单字符不允许进行赋值操作，即不能够修改<br>In [45]:<br>line[-1]<br>Out[45]:<br>‘n’<br>In [46]:<br>line[-1] = ‘b’</li></ul><hr><p>TypeError                                 Traceback (most recent call last)</p><p><ipython-input-46-bb10e4e82a2e> in <module>()<br>—-&gt; 1 line[-1] = ‘b’</module></ipython-input-46-bb10e4e82a2e></p><p>TypeError: ‘str’ object does not support item assignment</p><ul><li><p>字符串中的函数<br>在字符串名称后面按下.再按tab即可看到字符串内置的函数有哪些;在notebook中可以在后面加上？再按shift ＋ Enter 查看函数使用方法</p></li><li><p>capitalize<br>In [48]:<br>#例如<br>line.capitalize?<br>#会弹出来一个框在下面，框里面是使用说明，会看到如下信息<br>Docstring:<br>S.capitalize() -&gt; string<br>Return a copy of the string S with only its first character<br>capitalized.<br>Type:      builtin_function_or_method<br>意思：返回一个字符串，第一个字符大些，剩下的英文字符小写</p></li></ul><p>In [49]:<br>line = ‘wo ai ni’<br>line.capitalize()<br>Out[49]:<br>‘Wo ai ni’<br>In [50]:<br>line = ‘WO AI NI’<br>line.capitalize()<br>Out[50]:<br>‘Wo ai ni’</p><ul><li>center<br>In [51]:<br>#居中<br>line.center(20)<br>Out[51]:<br>‘      WO AI NI      ‘<br>意思：让这个字符串有20个字符，并居中</li></ul><p>In [52]:<br>line.center(20,’$’)<br>Out[52]:<br>‘$$$$$$WO AI NI$$$$$$’<br>第二个参数是补位字符</p><ul><li>count<br>In [55]:<br>#计数<br>line = ‘WO shi shui,ni Lai cai’<br>line.count(‘h’)<br>Out[55]:<br>2<br>In [57]:<br>line.count(‘3’)<br>Out[57]:<br>0</li><li>endswith<br>In [58]:<br>#是否以什么结尾<br>line.endswith(‘cai’)<br>Out[58]:<br>True<br>In [59]:<br>line.endswith(‘ca’)<br>Out[59]:<br>False<br>In [60]:<br>line.endswith(‘i’)<br>Out[60]:<br>True</li><li><p>startwith<br>是否以什么开头，返回True，False</p></li><li><p>find<br>In [62]:<br>#返回第一个为‘xxx’的下标<br>line = ‘WO shi shui,ni Lai cai’<br>line.find(‘i’)<br>Out[62]:<br>5<br>In [63]:<br>#如果字符不存在，返回－1<br>line.find(‘9’)<br>Out[63]:<br>-1</p></li><li>index 与find用法相同，只不过如果字符不存在就会报错<br>In [67]:<br>line.index(‘i’)<br>Out[67]:<br>5<br>In [68]:<br>line.index(‘9’)</li></ul><hr><p>ValueError                                Traceback (most recent call last)</p><p><ipython-input-68-1eaa62f36396> in <module>()<br>—-&gt; 1 line.index(‘9’)</module></ipython-input-68-1eaa62f36396></p><p>ValueError: substring not found</p><ul><li>upper 全部大写 lower 全部小写<br>In [69]:<br>line<br>Out[69]:<br>‘WO shi shui,ni Lai cai’<br>In [70]:<br>line.upper()<br>Out[70]:<br>‘WO SHI SHUI,NI LAI CAI’<br>In [71]:<br>line<br>Out[71]:<br>‘WO shi shui,ni Lai cai’<br>In [72]:<br>line.lower()<br>Out[72]:<br>‘wo shi shui,ni lai cai’</li><li>istitle 判断是不是标题<br>In [75]:<br>line<br>Out[75]:<br>‘WO shi shui,ni Lai cai’<br>In [74]:<br>line.istitle()<br>Out[74]:<br>False<br>判断方法：必须首字母大写 其余小写 才会是title</li></ul><p>In [81]:<br>line = ‘Drrrrr’<br>In [82]:<br>line.istitle()<br>Out[82]:<br>True<br>In [83]:<br>line = ‘De Sw Ae’<br>line.istitle()<br>Out[83]:<br>True</p><ul><li>islower 判断是否全部为小写 isupper 判断是否全部为大写</li><li><p>strip 去掉两端空格空白无效字符<br>In [84]:<br>line = ‘  adkf \n l   \n\t  ‘<br>line.strip()<br>Out[84]:<br>‘adkf \n l’<br>中间的是无法去掉的</p></li><li><p>rstrip 去除右端的</p></li><li>lstrip 去除左侧的</li><li>swapcase 大小写转换<br>In [85]:<br>line = ‘De Sw Ae’<br>line.swapcase()<br>Out[85]:<br>‘dE sW aE’<br>In [ ]:</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;bool型&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bool型只有两个值 Ture 和 False&lt;/li&gt;
+&lt;li&gt;注意：首字母要大写的才对&lt;br&gt;True == 1 False == 0 可以与普通数值进行计算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In [25]:&lt;br&gt;True == 1&lt;
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="note" scheme="http://yoursite.com/categories/python/note/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>lego-code</title>
+    <link href="http://yoursite.com/2019/01/20/lego-code/"/>
+    <id>http://yoursite.com/2019/01/20/lego-code/</id>
+    <published>2019-01-20T12:51:00.000Z</published>
+    <updated>2019-01-20T13:58:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Environment"><a href="#Environment" class="headerlink" title="Environment:"></a>Environment:</h2><p>JavaSE-1.6<br>Eclipse<br>LeJOS EV3</p><h2 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h2><h3 id="Count-java"><a href="#Count-java" class="headerlink" title="Count.java"></a>Count.java</h3><p>package mindstorm;</p><p>public class Count {</p><pre><code>private int countYellow;private int countRed;private int countGreen;private int countBlack;private int countDefault;public Count(int countYellow, int countRed, int countGreen, int countBlack, int countDefault) {    super();    this.countYellow = countYellow;    this.countRed = countRed;    this.countGreen = countGreen;    this.countBlack = countBlack;    this.countDefault = countDefault;}public int getCountDefault() {    return countDefault;}public void setCountDefault(int countDefault) {    this.countDefault = countDefault;}public Count() {    super();}public int getCountYellow() {    return countYellow;}public void setCountYellow(int countYellow) {    this.countYellow = countYellow;}public int getCountRed() {    return countRed;}public void setCountRed(int countRed) {    this.countRed = countRed;}public int getCountGreen() {    return countGreen;}public void setCountGreen(int countGreen) {    this.countGreen = countGreen;}public int getCountBlack() {    return countBlack;}public void setCountBlack(int countBlack) {    this.countBlack = countBlack;}</code></pre><p>}</p><h3 id="Sorting-java"><a href="#Sorting-java" class="headerlink" title="Sorting.java"></a>Sorting.java</h3><p>package mindstorm;</p><p>import lejos.hardware.Button;<br>import lejos.hardware.Key;<br>import lejos.hardware.KeyListener;<br>import lejos.hardware.Sound;<br>import lejos.hardware.lcd.LCD;<br>import lejos.hardware.motor.Motor;<br>import lejos.hardware.port.SensorPort;<br>import lejos.hardware.sensor.EV3ColorSensor;<br>import lejos.hardware.sensor.SensorConstants;<br>import lejos.robotics.Color;<br>import lejos.utility.Delay;<br>/**</p><ul><li>this project is for lego mindstorm EV3 color sortor</li><li>motor A and B is for running straight forward and backward</li><li>motor C is to rotate an angle the hand on the robot </li><li>sensor port 1 include a color sensor to identify the color</li><li></li><li><p>@author wanglinroot<br><em></em>/<br>public class Sorting extends Object implements SensorConstants{</p><p> static Count count = new Count(0,0,0,0,0);//count the colors</p></li></ul><pre><code>public static void main(String[] args) throws Exception{    /**     * listener, when press on escape, stop     */    Button.ESCAPE.addKeyListener(new KeyListener(){    public void keyPressed(Key b){System.exit(1);}    public void keyReleased(Key b){}        });    /**     * initialization:start project and the color sensor     */    EV3ColorSensor colorSensor = new EV3ColorSensor(SensorPort.S1);    /**     * hand from bottom, first hangs up, and the robot runs left to the slider     */    start();    /**     * start the LCD screen     */    LCD.clear();    LCD.drawString(&quot;Counting now!!!&quot;, 0, 0);    /**     * when button－ESCAPE on the monitor is pressed , stop     */    while(!Button.ESCAPE.isDown()){        rotate0();//catch ball     /**     * scan the color, different color runs different handling method         */    switch (colorSensor.getColorID()) {        case Color.BLACK:            handleBlack();            break;        case Color.RED:            handleRed();            break;        case Color.GREEN</code></pre><p>:</p><pre><code>            handleGreen();            break;        case Color.YELLOW:            handleYellow();            break;        default:            count.setCountDefault(count.getCountDefault() + 1);//count the default situation once add 1            LCD.drawString(&quot;Default = &quot; + count.getCountDefault(), 2, 6);//display at possition(2,6)            handleNone();            break;        }    }    colorSensor.close();    }private static void start() {    Motor.C.rotate(-75);    Delay.msDelay(1000);    Motor.A.setSpeed(150);    Motor.B.setSpeed(150);    Motor.A.backward();    Motor.B.backward();    Delay.msDelay(3600);    Motor.A.stop();    Motor.B.stop();    Delay.msDelay(1500);}/** * angle = 70° and 0.5s pause     */private static void rotate0() {    speed0();    Motor.C.rotate(70);    Delay.msDelay(500);    Motor.C.rotate(-70);    Delay.msDelay(1500);//1.5s pause}/** * angle = 63° and 1s pause     */private static void rotate1() {    Motor.C.rotate(63);    Delay.msDelay(1000);    Motor.C.rotate(-63);}/* * backward for 2.3s then stop */private static void backward1() {    Motor.A.backward();    Motor.B.backward();    Delay.msDelay(2300);    Motor.A.stop();    Motor.B.stop();}/* * forward for 2.3s then stop */private static void forward1() {    Motor.A.forward();    Motor.B.forward();    Delay.msDelay(2300);    Motor.A.stop();    Motor.B.stop();}/* * set speed */private static void speed() {    Motor.A.setSpeed(150);    Motor.B.setSpeed(150);    Motor.C.setSpeed(320);//320°/s}private static void speed0(){    Motor.C.setSpeed(180);//for catching I make it a little bit slow, rotate 180°/s}/** * when the color sensor scanning a yellow ball * sound a beep * then display the number on the LCD screen at the position(2,5) * after that use the speed 150°/s go forward for 1 second and rotate the hand * stop for 2.3 second  then backward for 2.3 second  */private static void handleYellow() {    count.setCountYellow(count.getCountYellow() + 1); //count the yellow once add 1        Sound.beep();    LCD.drawString(&quot;yellow = &quot; + count.getCountYellow(), 2, 5);    speed();    forward1();    rotate1();    backward1();    backwardadd();}private static void backwardadd() {    Motor.B.backward();    Motor.A.backward();    Delay.msDelay(75);    Motor.A.stop();    Motor.B.stop();}/** * when the color sensor scanning a Black ball * sound a beep * then display the number on the LCD screen at the position(2,2) * after that use the speed 150°/s go forward for 2.3 second twice and rotate the hand * stop for 1 second  then backward for 2.3 second twice */private static void handleGreen() {    Sound.buzz();    count.setCountGreen(count.getCountGreen() + 1);//count the Black once add 1    LCD.drawString(&quot;Green = &quot; + count.getCountGreen(), 2, 2);    speed();    forward1();    forward1();    rotate1();    backward1();    backward1();    backwardadd();//additional backward}/** * when the color sensor scanning a Red ball * sound a beep * then display the number on the LCD screen at the position(2,3) * after that use the speed 150°/s go forward for 2.3 second three times and rotate the hand * stop for 1 second  then backward for 2.3 second 3 times */private static void handleRed() {    Sound.beepSequenceUp();        count.setCountRed(count.getCountRed() + 1);//count the Red once add 1    LCD.drawString(&quot;Red = &quot; + count.getCountRed(), 2, 3);    speed();    for(int i=1;i&lt;=3;i++){        forward1();    }    rotate1();    for(int i=1;i&lt;=3;i++){        backward1();    }    backwardadd();}/** * when the color sensor scanning a Black ball * sound a beep * then display the number on the LCD screen at the position(2,4) * after that use the speed 150°/s go forward for 8.9 second and rotate the hand * stop for 1 second then backward for 8.9 second  */private static void handleBlack() {    Sound.beepSequence();    count.setCountBlack(count.getCountBlack() + 1);//count the Black once add 1    LCD.drawString(&quot;Black = &quot; + count.getCountBlack(), 2, 4);    speed();    Motor.A.forward();    Motor.B.forward();    Delay.msDelay(8900);    Motor.A.stop();    Motor.B.stop();    rotate1();    Motor.A.backward();    Motor.B.backward();    Delay.msDelay(8900);    Motor.A.stop();    Motor.B.stop();    backwardadd();}/** *  when the color sensor scanning others such as a fault or a miss * use the speed 150°/s go forward for 3.6 second and rotate the hand * stop for 1 second then backward for 3.6 second  */private static void handleNone() {    speed();    Motor.A.forward();    Motor.B.forward();    Delay.msDelay(3600);    Motor.A.stop();    Motor.B.stop();    rotate1();    Motor.A.backward();    Motor.B.backward();    Delay.msDelay(3600);    Motor.A.stop();    Motor.B.stop();    backwardadd();}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Environment&quot;&gt;&lt;a href=&quot;#Environment&quot; class=&quot;headerlink&quot; title=&quot;Environment:&quot;&gt;&lt;/a&gt;Environment:&lt;/h2&gt;&lt;p&gt;JavaSE-1.6&lt;br&gt;Eclipse&lt;br&gt;LeJOS E
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+      <category term="lego" scheme="http://yoursite.com/tags/lego/"/>
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+      <category term="leJOS" scheme="http://yoursite.com/tags/leJOS/"/>
+    
+      <category term="EV3" scheme="http://yoursite.com/tags/EV3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python入门3</title>
+    <link href="http://yoursite.com/2019/01/19/Python%E5%85%A5%E9%97%A83/"/>
+    <id>http://yoursite.com/2019/01/19/Python入门3/</id>
+    <published>2019-01-19T15:33:29.000Z</published>
+    <updated>2019-01-21T16:10:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>交换值</p><p>In [94]:<br>a = 15<br>b = 20<br>a,b = b,a<br>print (“a is {}, b is {}”.format(a,b))<br>a is 20, b is 15</p><p>命名规范</p><p>标识符的第一个字符必须是英文大小写字母或下划线</p><p>标识符的其他字符可以由英文大小写字母或下划线或阿拉伯数字组成</p><p>标识符大小写敏感</p><p>代码规范 建议</p><ul><li>尽量不要使用单字符</li><li>变量名字清晰表达变量所代表的意思</li><li>合理使用下划线<br>notebook里面用 -+空格 来表示前面的圆点</li></ul><p>变量类型</p><ol><li>字符串 str</li><li>数字 int float complex…</li><li>列表 list</li><li>元组 tuple</li><li>字典 dict<br>数值类型</li></ol><p>In [101]:<br>number = 10<br>In [102]:<br>number = number + 10<br>In [103]:<br>print number<br>20</p><p>下面是另一种写法</p><p>In [104]:<br>number += 10<br>In [105]:<br>print number<br>30</p><p>其他运算符号 - * / 同样适用</p><p>选中框 按 L 显示行数 小写的现实本框中行数 大写（按shift） 显示本页每框中行数</p><p>math模块介绍</p><p>乘方，开方</p><ul><li>第一个参数是数值 第二个参数是乘几次方<br>In [106]:<br>import math<br>In [107]:<br>math.pow(3,10)<br>Out[107]:<br>59049.0<br>建议采用下面的方法进行计算 因为更快</li></ul><p>In [108]:<br>3 ** 10<br>Out[108]:<br>59049<br>math.floor( )向下取整</p><p>math.ceil( )向上取整</p><p>In [111]:</p><p>#参数是度数，180表示pi的值 度的转换<br>math.radians(180)<br>Out[111]:<br>3.141592653589793<br>In [110]:<br>math.pi<br>Out[110]:<br>3.141592653589793<br>In [112]:</p><p>#sin cos tan函数<br>math.sin(math.pi/2)<br>Out[112]:<br>1.0<br>In [113]:</p><p>#min 取最小值 max 取最大值<br>min(223,421,23,11)<br>Out[113]:<br>11<br>In [115]:</p><p>#求和<br>sum([223,421,23,11])<br>Out[115]:<br>678<br>sum这里需要[] 是因为是列表</p><p>In [118]:</p><p>#取商和余数<br>divmod(100,3)<br>Out[118]:<br>(33, 1)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;交换值&lt;/p&gt;
+&lt;p&gt;In [94]:&lt;br&gt;a = 15&lt;br&gt;b = 20&lt;br&gt;a,b = b,a&lt;br&gt;print (“a is {}, b is {}”.format(a,b))&lt;br&gt;a is 20, b is 15&lt;/p&gt;
+&lt;p&gt;命名规范&lt;/p&gt;
+&lt;p&gt;标识符
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="note" scheme="http://yoursite.com/categories/python/note/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python入门2</title>
+    <link href="http://yoursite.com/2019/01/19/Python%E5%85%A5%E9%97%A82/"/>
+    <id>http://yoursite.com/2019/01/19/Python入门2/</id>
+    <published>2019-01-19T15:32:08.000Z</published>
+    <updated>2019-01-21T16:10:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>python可以用来做加减乘除等计算</p><p>In [76]:<br>(100+1-10*2)/5<br>Out[76]:<br>16</p><p>python2.7 由于版本问题默认取整，所以如果想用float型就就在计算是使用浮点型的数</p><p>In [96]:<br>100/2.6<br>Out[96]:<br>38.46153846153846<br>In [97]:<br>100//2.6<br>Out[97]:<br>38.0<br>In [98]:<br>round(100/2.6)<br>Out[98]:<br>38.0<br>In [100]:<br>round(100/2.6,3)<br>Out[100]:<br>38.462</p><p>取余数%</p><p>In [78]:<br>100%3<br>Out[78]:<br>1<br>乘方**</p><p>In [79]:<br>10**3<br>Out[79]:<br>1000<br>开方</p><p>In [80]:<br>10.0**(1/3.0)<br>Out[80]:<br>2.154434690031884<br>数学计算模块 math</p><p>In [81]:<br>import math<br>In [82]:<br>10 <strong> (1/3)<br>Out[82]:<br>1<br>In [83]:<br>10.0</strong>(1/3.0)<br>Out[83]:<br>2.154434690031884<br>In [84]:<br>math.pi<br>Out[84]:<br>3.141592653589793</p><p>sin 90°</p><p>In [85]:<br>math.sin(math.pi/2.0)<br>Out[85]:<br>1.0<br>向下取整</p><p>In [86]:<br>math.floor(9.777876)<br>Out[86]:<br>9.0<br>向上取整</p><p>In [87]:<br>math.ceil(7.3332332)<br>Out[87]:<br>8.0<br>选中框 按b 就会在下面加行； 按a 则会在上面加行</p><p>In [ ]:<br>在code模式下 # 代表注释</p><p>In [88]:</p><p>#不影响code,但注释很重要<br>print (3.0/5.0)<br>print (1+3)<br>0.6<br>4</p><p>python语义型语言</p><p>In [89]:</p><p>#赋值<br>apple_price = 1.5<br>apple_need_accout = 3<br>apple_sum = apple_price * apple_need_accout<br>print apple_sum<br>4.5</p><p>tab键提示我上面用到的参数</p><p>In [90]:<br>apple_weight = 200<br>weight_sum = apple_need_accout * apple_weight<br>print weight_sum<br>600</p><p>In [91]:</p><p>#输出多个值 用逗号分隔<br>print (apple_sum,apple_need_accout,weight_sum)<br>(4.5, 3, 600)</p><p>format函数：增强的格式化字符串函数</p><p>In [93]:</p><p>#用法 {}<br>“苹果的价格为:{},苹果的重量为:{},苹果的总价为:{}”.format(apple_price,apple_weight,apple_sum)<br>Out[93]:<br>‘\xe8\x8b\xb9\xe6\x9e\x9c\xe7\x9a\x84\xe4\xbb\xb7\xe6\xa0\xbc\xe4\xb8\xba:1.5,\xe8\x8b\xb9\xe6\x9e\x9c\xe7\x9a\x84\xe9\x87\x8d\xe9\x87\x8f\xe4\xb8\xba:200,\xe8\x8b\xb9\xe6\x9e\x9c\xe7\x9a\x84\xe6\x80\xbb\xe4\xbb\xb7\xe4\xb8\xba:4.5’<br>苹果的价格为:1.5,苹果的重量为:200,苹果的总价为:4.5</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;python可以用来做加减乘除等计算&lt;/p&gt;
+&lt;p&gt;In [76]:&lt;br&gt;(100+1-10*2)/5&lt;br&gt;Out[76]:&lt;br&gt;16&lt;/p&gt;
+&lt;p&gt;python2.7 由于版本问题默认取整，所以如果想用float型就就在计算是使用浮点型的数&lt;/p&gt;
+&lt;p&gt;In [9
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="note" scheme="http://yoursite.com/categories/python/note/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python入门1</title>
+    <link href="http://yoursite.com/2019/01/19/Python%E5%85%A5%E9%97%A81/"/>
+    <id>http://yoursite.com/2019/01/19/Python入门1/</id>
+    <published>2019-01-19T15:30:50.000Z</published>
+    <updated>2019-01-21T16:07:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Jupyter笔记：是Anaconda下的辅助软件<br>markdown——m+shift&amp;Enter 选中该行按m就会变成markdown模式</p><p>#+space+输入内容 用来调整内容的大小字号 从大到小#由少到多</p><p>最简单的开始 hello world</p><p>In [1]:<br>print(‘Hello world’)<br>Hello world</p><p>单引号双引号效果一样</p><p>In [2]:<br>import this<br>The Zen of Python, by Tim Peters</p><p>Beautiful is better than ugly.<br>Explicit is better than implicit.<br>Simple is better than complex.<br>Complex is better than complicated.<br>Flat is better than nested.<br>Sparse is better than dense.<br>Readability counts.<br>Special cases aren’t special enough to break the rules.<br>Although practicality beats purity.<br>Errors should never pass silently.<br>Unless explicitly silenced.<br>In the face of ambiguity, refuse the temptation to guess.<br>There should be one– and preferably only one –obvious way to do it.<br>Although that way may not be obvious at first unless you’re Dutch.<br>Now is better than never.<br>Although never is often better than <em>right</em> now.<br>If the implementation is hard to explain, it’s a bad idea.<br>If the implementation is easy to explain, it may be a good idea.<br>Namespaces are one honking great idea – let’s do more of those!</p><p>这首歌的名字叫 python之禅</p><p>如果需要单独打印单引号则用到转义字符\</p><p>In [3]:<br>print(‘hello,\’world’)<br>hello,’world</p><p>合理的使用单双引号可以避免使用转义字符</p><p>In [4]:<br>print(‘hello,”world’)<br>hello,”world</p><p>In [5]:<br>print(“hello,’world”)<br>hello,’world</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Jupyter笔记：是Anaconda下的辅助软件&lt;br&gt;markdown——m+shift&amp;amp;Enter 选中该行按m就会变成markdown模式&lt;/p&gt;
+&lt;p&gt;#+space+输入内容 用来调整内容的大小字号 从大到小#由少到多&lt;/p&gt;
+&lt;p&gt;最简单的开始 hel
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+      <category term="note" scheme="http://yoursite.com/categories/python/note/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+      <category term="note" scheme="http://yoursite.com/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>lego-user</title>
+    <link href="http://yoursite.com/2019/01/19/lego-user/"/>
+    <id>http://yoursite.com/2019/01/19/lego-user/</id>
+    <published>2019-01-19T15:25:52.000Z</published>
+    <updated>2019-01-20T13:58:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<center><strong>Lego Mindstorm For User</strong></center><p><br></p><div class="row">    <embed src="/pdf/lego-user.pdf" width="100%" height="550" type="application/pdf"></div> <p><br></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;center&gt;&lt;strong&gt;Lego Mindstorm For User&lt;/strong&gt;&lt;/center&gt;
+
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;/pdf/lego-user.pdf&quot; width=&quot;100%
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+      <category term="lego" scheme="http://yoursite.com/tags/lego/"/>
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+      <category term="leJOS" scheme="http://yoursite.com/tags/leJOS/"/>
+    
+      <category term="EV3" scheme="http://yoursite.com/tags/EV3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>lego-developer</title>
+    <link href="http://yoursite.com/2019/01/19/lego-developer/"/>
+    <id>http://yoursite.com/2019/01/19/lego-developer/</id>
+    <published>2019-01-19T15:17:18.000Z</published>
+    <updated>2019-01-20T13:58:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<center><strong>Lego-Assembly For Developer</strong></center><p><br></p><div class="row">    <embed src="/pdf/lego-developer.pdf" width="100%" height="550" type="application/pdf"></div> <p><br></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;center&gt;&lt;strong&gt;Lego-Assembly For Developer&lt;/strong&gt;&lt;/center&gt;
+
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;/pdf/lego-developer.pdf&quot; wi
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+      <category term="lego" scheme="http://yoursite.com/tags/lego/"/>
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+      <category term="leJOS" scheme="http://yoursite.com/tags/leJOS/"/>
+    
+      <category term="EV3" scheme="http://yoursite.com/tags/EV3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>json-scilab</title>
+    <link href="http://yoursite.com/2019/01/19/json-scilab/"/>
+    <id>http://yoursite.com/2019/01/19/json-scilab/</id>
+    <published>2019-01-19T15:15:54.000Z</published>
+    <updated>2019-01-20T14:01:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<center><strong>Towards a Distributed Simulation Toolbox for Scilab</strong></center><p><br></p><div class="row">    <embed src="/pdf/json-scilab.pdf" width="100%" height="550" type="application/pdf"></div> <p><br></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;center&gt;&lt;strong&gt;Towards a Distributed Simulation Toolbox for Scilab&lt;/strong&gt;&lt;/center&gt;
+
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;/pd
+      
+    
+    </summary>
+    
+      <category term="scilab" scheme="http://yoursite.com/categories/scilab/"/>
+    
+    
+      <category term="json" scheme="http://yoursite.com/tags/json/"/>
+    
+      <category term="scilab" scheme="http://yoursite.com/tags/scilab/"/>
+    
+      <category term="c" scheme="http://yoursite.com/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Data-Mining-01</title>
+    <link href="http://yoursite.com/2019/01/19/Data-Mining-01/"/>
+    <id>http://yoursite.com/2019/01/19/Data-Mining-01/</id>
+    <published>2019-01-19T15:14:48.000Z</published>
+    <updated>2019-01-20T13:50:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>简单了解下数据挖掘<br>将数据data变成知识knowledge的过程</p><p>data-target data-preprocessed data-Transformed data-patterns-knowledge</p><p>什么是KDD? Knowledge Discover in Database<br>定义：KDD is the nontrivial process of identifying valid, novel, potentially useful, and ultimately understandable patterns in data.<br>valid: the discovered patterns should also hold for new, previously unseen problem instances.<br>novel: at least to the system and preferably to the user<br>potentially useful: they should lead to some benefit to the user or task<br>ultimately understandable用户必须理解: the end user should be able to interpret the patterns either immediately or aftersome post-processing</p><p>datasets 由instances组成，由特征attribute描述</p><p>learning Task 分类<br>有监督supervise学习 有反馈<br>无监督unsupervised学习 无反馈</p><p>direct feedback-有label</p><p>1-unsupervised learning 无label<br>clustering<br>applications:Market Segmentation, Document Clustering<br>Typical subtask: Clustering, Association rules(e.g. Market basket analysis), outlier detection</p><p>2-supervise learning 有label 可以集成<br>Typical subtask: Classification, Regression, Outlier<br>Classification<br>Application: Fraud Detection, Chum prediction in telo<br>e.g. Goggle news 左侧都是有label的， 预测Farming</p><p>Un/Supervise learning 都有异常检测</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;简单了解下数据挖掘&lt;br&gt;将数据data变成知识knowledge的过程&lt;/p&gt;
+&lt;p&gt;data-target data-preprocessed data-Transformed data-patterns-knowledge&lt;/p&gt;
+&lt;p&gt;什么是KDD? Knowled
+      
+    
+    </summary>
+    
+      <category term="data mining" scheme="http://yoursite.com/categories/data-mining/"/>
+    
+    
+      <category term="data mining" scheme="http://yoursite.com/tags/data-mining/"/>
+    
+      <category term="machine learning" scheme="http://yoursite.com/tags/machine-learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cooperation</title>
+    <link href="http://yoursite.com/2019/01/19/cooperation/"/>
+    <id>http://yoursite.com/2019/01/19/cooperation/</id>
+    <published>2019-01-19T15:12:37.000Z</published>
+    <updated>2019-01-20T12:16:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<center><strong>Cooperative Systems</strong></center><p><br></p><center><strong>Course Project</strong></center><p><br></p><div class="row">    <embed src="/pdf/cooperation.pdf" width="100%" height="550" type="application/pdf"></div> <p><br></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;center&gt;&lt;strong&gt;Cooperative Systems&lt;/strong&gt;&lt;/center&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;center&gt;&lt;strong&gt;Course Project&lt;/strong&gt;&lt;/center&gt;
+
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+
+	&lt;div cl
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+      <category term="cooperation" scheme="http://yoursite.com/tags/cooperation/"/>
+    
+  </entry>
+  
+</feed>
