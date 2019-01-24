@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2205c8;
+  background: #fbcc5e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2905,7 +2905,7 @@ hr {
   }
 }
 body {
-  background: linear-gradient(to left, rgba(255,255,255,0.4), rgba(255,255,255,0.8)), url("/themes/next/source/images/background.png");
+  background: linear-gradient(to left, rgba(255,255,255,0.4), rgba(255,255,255,0.8)), url("/images/background.png");
   background-attachment: fixed;
   background-repeat: repeat;
   background-position: 0 0;
